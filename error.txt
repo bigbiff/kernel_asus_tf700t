@@ -1,0 +1,2755 @@
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/basic/docproc
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/kxgettext.o
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf --silentoldconfig Kconfig
+  CHK     include/linux/version.h
+  UPD     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/kallsyms
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/bin2c
+  Generating include/generated/mach-types.h
+  MKELF   scripts/mod/elfconfig.h
+  CC      kernel/bounds.s
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  GEN     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  GEN     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  HOSTCC  usr/gen_init_cpio
+  CC      arch/arm/vfp/vfpmodule.o
+  UPD     include/generated/compile.h
+  CC      init/calibrate.o
+  CC      init/version.o
+  GEN     usr/initramfs_data.cpio
+  CC      arch/arm/kernel/elf.o
+  AS      arch/arm/vfp/entry.o
+  AS      arch/arm/kernel/entry-armv.o
+  AS      usr/initramfs_data.o
+  LD      usr/built-in.o
+  AS      arch/arm/vfp/vfphw.o
+  AS      arch/arm/kernel/entry-common.o
+  CC      arch/arm/mm/dma-mapping.o
+  CC      arch/arm/mm/extable.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      arch/arm/kernel/irq.o
+  CC      arch/arm/kernel/process.o
+  CC      arch/arm/common/gic.o
+  CC      arch/arm/mm/fault.o
+  LD      init/mounts.o
+  LD      init/built-in.o
+  CC      arch/arm/mm/init.o
+  CC      arch/arm/mm/iomap.o
+  LD      arch/arm/common/built-in.o
+  CC      arch/arm/mm/fault-armv.o
+  CC      arch/arm/vfp/vfpdouble.o
+  CC      arch/arm/mach-tegra/apbio.o
+  CC      arch/arm/kernel/ptrace.o
+  CC      arch/arm/mm/flush.o
+  CC      arch/arm/mm/idmap.o
+  CC      arch/arm/mm/ioremap.o
+  CC      arch/arm/mach-tegra/common.o
+  CC      arch/arm/mm/mmap.o
+  LD      arch/arm/vfp/vfp.o
+  CC      arch/arm/mm/pgd.o
+  CC      arch/arm/mm/mmu.o
+  LD      arch/arm/vfp/built-in.o
+  CC      arch/arm/mm/vmregion.o
+arch/arm/mach-tegra/common.c: In function 'tegra_init_cache':
+arch/arm/mach-tegra/common.c:272: warning: unused variable 'tmp'
+arch/arm/mach-tegra/common.c:271: warning: unused variable 'speedo'
+  CC      arch/arm/kernel/return_address.o
+  CC      arch/arm/mm/pageattr.o
+arch/arm/mach-tegra/common.c: In function 'cpufreq_set_governor':
+arch/arm/mach-tegra/common.c:997: warning: 'i' may be used uninitialized in this function
+  CC      arch/arm/mm/proc-syms.o
+  CC      arch/arm/mm/alignment.o
+arch/arm/kernel/return_address.c:62:2: warning: #warning "TODO: return_address should use unwind tables"
+  CC      arch/arm/kernel/setup.o
+  CC      kernel/sched.o
+  CC      arch/arm/mm/highmem.o
+  CC      arch/arm/mach-tegra/common-t3.o
+  AS      arch/arm/mm/abort-ev7.o
+  CC      arch/arm/mach-tegra/io.o
+  CC      arch/arm/kernel/signal.o
+  AS      arch/arm/mm/pabort-v7.o
+arch/arm/kernel/setup.c: In function 'check_factory_mode':
+arch/arm/kernel/setup.c:511: warning: comparison between pointer and integer
+  AS      arch/arm/mm/cache-v7.o
+  CC      arch/arm/mach-tegra/irq.o
+  CC      arch/arm/mm/copypage-v6.o
+  CC      arch/arm/mach-tegra/syncpt.o
+  CC      arch/arm/mm/context.o
+kernel/sched.c: In function 'migrate_tasks2':
+kernel/sched.c:6124: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+kernel/sched.c:6126: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+kernel/sched.c:6128: warning: passing argument 1 of 'spin_is_locked' from incompatible pointer type
+include/linux/spinlock.h:363: note: expected 'struct spinlock_t *' but argument is of type 'struct raw_spinlock_t *'
+  CC      arch/arm/mach-tegra/clock.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      arch/arm/mach-tegra/timer.o
+kernel/sched.c: At top level:
+kernel/sched.c:6056: warning: 'migrate_tasks' defined but not used
+arch/arm/mach-tegra/clock.c:40: warning: parameter names (without types) in function declaration
+  AS      arch/arm/mm/tlb-v7.o
+  CC      mm/filemap.o
+  CC      arch/arm/kernel/stacktrace.o
+  AS      arch/arm/mm/proc-v7.o
+  CC      arch/arm/mm/cache-l2x0.o
+  CC      arch/arm/mach-tegra/tegra3_clocks.o
+  CC      arch/arm/mach-tegra/timer-t3.o
+  CC      arch/arm/kernel/time.o
+arch/arm/mach-tegra/tegra3_clocks.c: In function 'tegra3_pll_clk_set_rate':
+arch/arm/mach-tegra/tegra3_clocks.c:1698: warning: ISO C90 forbids mixed declarations and code
+  LD      arch/arm/mm/built-in.o
+  CC      arch/arm/kernel/traps.o
+  CC      arch/arm/kernel/fiq.o
+  CC      arch/arm/mach-tegra/gpio.o
+  CC      arch/arm/kernel/armksyms.o
+  CC      arch/arm/kernel/module.o
+  CC      arch/arm/mach-tegra/pinmux.o
+  CC      arch/arm/mach-tegra/devices.o
+  AS      arch/arm/mach-tegra/delay.o
+  CC      arch/arm/mach-tegra/powergate.o
+  CC      arch/arm/kernel/bios32.o
+  CC      mm/mempool.o
+  CC      mm/oom_kill.o
+  CC      arch/arm/mach-tegra/pm.o
+  CC      arch/arm/mach-tegra/pm-irq.o
+arch/arm/mach-tegra/pm-irq.c:239: warning: data definition has no type or storage class
+arch/arm/mach-tegra/pm-irq.c:239: warning: type defaults to 'int' in declaration of 'EXPORT_SYMBOL'
+arch/arm/mach-tegra/pm-irq.c:239: warning: parameter names (without types) in function declaration
+  CC      arch/arm/kernel/isa.o
+  AS      arch/arm/kernel/sleep.o
+arch/arm/mach-tegra/pm.c:817: warning: 'tegra_suspend_check_pwr_stats' defined but not used
+  CC      arch/arm/mach-tegra/gic.o
+  CC      mm/fadvise.o
+  CC      arch/arm/kernel/sched_clock.o
+  CC      arch/arm/kernel/smp.o
+  CC      mm/maccess.o
+  AS      arch/arm/mach-tegra/sleep.o
+  CC      arch/arm/kernel/smp_tlb.o
+  AS      arch/arm/mach-tegra/sleep-t3.o
+  CC      mm/page_alloc.o
+  CC      mm/page-writeback.o
+  CC      arch/arm/mach-tegra/fuse.o
+  CC      arch/arm/mach-tegra/kfuse.o
+  CC      arch/arm/mach-tegra/csi.o
+  CC      arch/arm/kernel/smp_scu.o
+  CC      arch/arm/kernel/smp_twd.o
+  CC      arch/arm/mach-tegra/tegra_odm_fuses.o
+  CC      mm/readahead.o
+  CC      arch/arm/kernel/unwind.o
+  CC      arch/arm/kernel/swp_emulate.o
+  CC      arch/arm/kernel/hw_breakpoint.o
+  CC      arch/arm/kernel/pmu.o
+  CC      arch/arm/mach-tegra/i2c_error_recovery.o
+  CC      arch/arm/kernel/perf_event.o
+  CC      arch/arm/mach-tegra/mc.o
+  CC      kernel/fork.o
+  CC      arch/arm/kernel/cpu_pm.o
+  CC      arch/arm/mach-tegra/usb_phy.o
+  CC      arch/arm/kernel/io.o
+  CC      kernel/exec_domain.o
+  CC      kernel/panic.o
+arch/arm/mach-tegra/usb_phy.c: In function 'utmi_phy_postresume':
+arch/arm/mach-tegra/usb_phy.c:1539: warning: unused variable 'base'
+  CC      mm/swap.o
+  CC      kernel/printk.o
+  CC      kernel/cpu.o
+  CC      kernel/exit.o
+  AS      arch/arm/kernel/head.o
+  CC      arch/arm/kernel/init_task.o
+  CC      kernel/itimer.o
+  TIMEC   kernel/timeconst.h
+  CC      kernel/softirq.o
+  CC      mm/truncate.o
+  CC      kernel/resource.o
+  LDS     arch/arm/kernel/vmlinux.lds
+  CC      arch/arm/mach-tegra/fiq.o
+  LD      arch/arm/kernel/built-in.o
+  CC      kernel/sysctl.o
+  CC      fs/open.o
+  CC      arch/arm/mach-tegra/pwm.o
+  CC      kernel/sysctl_binary.o
+  CC      mm/vmscan.o
+  CC      arch/arm/mach-tegra/dvfs.o
+  CC      kernel/capability.o
+  CC      kernel/ptrace.o
+  CC      fs/read_write.o
+  CC      kernel/timer.o
+  CC      kernel/user.o
+  CC      kernel/signal.o
+  CC      arch/arm/mach-tegra/tegra3_dvfs.o
+  CC      arch/arm/mach-tegra/latency_allowance.o
+  CC      kernel/sys.o
+  CC      arch/arm/mach-tegra/edp.o
+  CC      arch/arm/mach-tegra/tegra3_speedo.o
+  CC      fs/file_table.o
+  CC      arch/arm/mach-tegra/tegra3_actmon.o
+  CC      kernel/kmod.o
+  CC      mm/shmem.o
+  CC      arch/arm/mach-tegra/tegra3_emc.o
+  CC      fs/super.o
+arch/arm/mach-tegra/tegra3_emc.c: In function 'tegra_init_emc':
+arch/arm/mach-tegra/tegra3_emc.c:955: warning: 'return' with no value, in function returning non-void
+arch/arm/mach-tegra/tegra3_emc.c:966: warning: 'return' with no value, in function returning non-void
+  CC      fs/char_dev.o
+arch/arm/mach-tegra/tegra3_emc.c:1035: warning: 'return' with no value, in function returning non-void
+  CC      fs/stat.o
+  CC      fs/exec.o
+  CC      kernel/workqueue.o
+  CC      arch/arm/mach-tegra/wakeups-t3.o
+  CC      arch/arm/mach-tegra/pm-t3.o
+  CC      fs/pipe.o
+  LD      ipc/built-in.o
+  CC      fs/namei.o
+  CC      fs/fcntl.o
+  CC      arch/arm/mach-tegra/pinmux-t3-tables.o
+  CC      arch/arm/mach-tegra/localtimer.o
+  CC      mm/prio_tree.o
+  CC      security/commoncap.o
+  CC      arch/arm/mach-tegra/platsmp.o
+  CC      mm/util.o
+  CC      fs/ioctl.o
+  CC      fs/readdir.o
+  CC      arch/arm/mach-tegra/hotplug.o
+  CC      mm/mmzone.o
+  AS      arch/arm/mach-tegra/headsmp.o
+  CC      security/min_addr.o
+  CC      arch/arm/mach-tegra/reset.o
+  CC      security/tf_driver/tf_util.o
+  CC      fs/select.o
+  CC      mm/vmstat.o
+  CC      kernel/pid.o
+  CC      arch/arm/mach-tegra/dma.o
+  CC      security/tf_driver/tf_conn.o
+  CC      fs/fifo.o
+  CC      fs/dcache.o
+  CC      mm/backing-dev.o
+  CC      kernel/rcupdate.o
+  CC      arch/arm/mach-tegra/cpu-tegra.o
+  CC      security/tf_driver/tf_device.o
+  CC      arch/arm/mach-tegra/cpu-tegra3.o
+  CC      kernel/extable.o
+arch/arm/mach-tegra/cpu-tegra.c: In function 'Asus_camera_enable_set_emc_rate':
+arch/arm/mach-tegra/cpu-tegra.c:105: warning: ISO C90 forbids mixed declarations and code
+arch/arm/mach-tegra/cpu-tegra.c: In function 'Asus_camera_disable_set_emc_rate':
+arch/arm/mach-tegra/cpu-tegra.c:140: warning: ISO C90 forbids mixed declarations and code
+arch/arm/mach-tegra/cpu-tegra.c:141: warning: unused variable 'emc_cur_rate'
+arch/arm/mach-tegra/cpu-tegra.c:140: warning: unused variable 'cpu_emc_cur_rate'
+arch/arm/mach-tegra/cpu-tegra.c: In function 'gps_state_set':
+arch/arm/mach-tegra/cpu-tegra.c:186: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:186: warning: format '%u' expects type 'unsigned int', but argument 3 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:186: warning: format '%u' expects type 'unsigned int', but argument 4 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:186: warning: format '%u' expects type 'unsigned int', but argument 5 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:191: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:195: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra3.c: In function 'enter_lp_set':
+arch/arm/mach-tegra/cpu-tegra3.c:208: warning: too many arguments for format
+arch/arm/mach-tegra/cpu-tegra3.c: In function 'tegra_cpu_down_work_func':
+arch/arm/mach-tegra/cpu-tegra3.c:234: warning: too few arguments for format
+arch/arm/mach-tegra/cpu-tegra.c: In function 'set_emc_min_rate':
+arch/arm/mach-tegra/cpu-tegra.c:1020: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:1024: warning: format '%u' expects type 'unsigned int', but argument 3 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c: In function 'set_emc_max_rate':
+arch/arm/mach-tegra/cpu-tegra.c:1039: warning: format '%u' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c:1043: warning: format '%u' expects type 'unsigned int', but argument 3 has type 'long unsigned int'
+arch/arm/mach-tegra/cpu-tegra.c: In function 'unlock_cpu_lp_mode':
+arch/arm/mach-tegra/cpu-tegra.c:1066: warning: unused variable 'project_id'
+arch/arm/mach-tegra/cpu-tegra.c: In function 'tegra_pm_notify':
+arch/arm/mach-tegra/cpu-tegra.c:1110: warning: 'return' with no value, in function returning non-void
+arch/arm/mach-tegra/cpu-tegra.c: At top level:
+arch/arm/mach-tegra/cpu-tegra.c:1137: warning: function declaration isn't a prototype
+arch/arm/mach-tegra/cpu-tegra.c:387: warning: 'user_cap_speed' defined but not used
+  CC      security/tf_driver/tf_comm.o
+  CC      kernel/params.o
+  CC      mm/page_isolation.o
+  CC      arch/arm/mach-tegra/cpuidle.o
+  CC      mm/mm_init.o
+  CC      arch/arm/mach-tegra/cpuidle-t3.o
+  CC      kernel/posix-timers.o
+  CC      mm/mmu_context.o
+  CC      security/tf_driver/tf_comm_tz.o
+  CC      arch/arm/mach-tegra/tegra3_throttle.o
+  CC      mm/fremap.o
+  CC      arch/arm/mach-tegra/tegra3_thermal.o
+  CC      fs/attr.o
+  LD      security/tf_driver/tf_driver.o
+  CC      arch/arm/mach-tegra/iovmm.o
+  LD      security/tf_driver/built-in.o
+  LD      security/built-in.o
+  CC      arch/arm/mach-tegra/iovmm-smmu.o
+  CC      mm/highmem.o
+  CC      crypto/api.o
+  CC      kernel/kthread.o
+  CC      fs/bad_inode.o
+  CC      kernel/wait.o
+  CC      mm/madvise.o
+  CC      mm/memory.o
+  CC      crypto/cipher.o
+  CC      arch/arm/mach-tegra/sysfs-cluster.o
+  CC      fs/file.o
+  CC      arch/arm/mach-tegra/tegra3_tsensor.o
+  CC      kernel/kfifo.o
+  CC      crypto/compress.o
+  CC      kernel/sys_ni.o
+  CC      arch/arm/mach-tegra/powerdetect.o
+  CC      fs/filesystems.o
+  CC      mm/mincore.o
+  CC      crypto/algapi.o
+  CC      crypto/scatterwalk.o
+  CC      arch/arm/mach-tegra/tegra_usb_modem_power.o
+  CC      kernel/posix-cpu-timers.o
+  CC      mm/mlock.o
+  CC      fs/namespace.o
+  CC      crypto/proc.o
+  CC      arch/arm/mach-tegra/board-cardhu.o
+  CC      crypto/ablkcipher.o
+arch/arm/mach-tegra/board-cardhu.c:410: warning: 'cardhu_codec_wm8903_info' defined but not used
+arch/arm/mach-tegra/board-cardhu.c:418: warning: 'cardhu_codec_rt5640_info' defined but not used
+arch/arm/mach-tegra/board-cardhu.c:425: warning: 'cardhu_codec_max98095_info' defined but not used
+arch/arm/mach-tegra/board-cardhu.c:761: warning: 'cardhu_audio_wm8903_device' defined but not used
+arch/arm/mach-tegra/board-cardhu.c:777: warning: 'cardhu_audio_max98095_device' defined but not used
+  CC      crypto/blkcipher.o
+  CC      mm/mmap.o
+  CC      fs/seq_file.o
+  CC      arch/arm/mach-tegra/board-cardhu-kbc.o
+  CC      kernel/mutex.o
+arch/arm/mach-tegra/board-cardhu-kbc.c:59: warning: 'cardhu_wake_cfg' defined but not used
+  CC      crypto/ahash.o
+  CC      arch/arm/mach-tegra/board-cardhu-panel.o
+  CC      kernel/hrtimer.o
+  CC      kernel/rwsem.o
+  CC      fs/xattr.o
+  CC      kernel/nsproxy.o
+arch/arm/mach-tegra/board-cardhu-panel.c: In function 'cardhu_panel_early_suspend':
+arch/arm/mach-tegra/board-cardhu-panel.c:1231: warning: unused variable 'i'
+  CC      crypto/shash.o
+  CC      fs/libfs.o
+  CC      fs/fs-writeback.o
+  CC      mm/mprotect.o
+  CC      arch/arm/mach-tegra/board-cardhu-pinmux.o
+arch/arm/mach-tegra/board-cardhu-pinmux.c: In function 'cardhu_pinmux_init':
+arch/arm/mach-tegra/board-cardhu-pinmux.c:708: warning: 'pins_info' may be used uninitialized in this function
+arch/arm/mach-tegra/board-cardhu-pinmux.c:664: note: 'pins_info' was declared here
+arch/arm/mach-tegra/board-cardhu-pinmux.c:705: warning: 'len' may be used uninitialized in this function
+arch/arm/mach-tegra/board-cardhu-pinmux.c:662: note: 'len' was declared here
+  CC      kernel/srcu.o
+  CC      arch/arm/mach-tegra/board-cardhu-power.o
+  CC      arch/arm/mach-tegra/board-cardhu-pm298-power-rails.o
+  CC      crypto/algboss.o
+  CC      kernel/semaphore.o
+  CC      mm/mremap.o
+  CC      fs/pnode.o
+arch/arm/mach-tegra/board-cardhu-power.c: In function 'cardhu_regulator_init':
+arch/arm/mach-tegra/board-cardhu-power.c:446: warning: ISO C90 forbids mixed declarations and code
+  CC      kernel/notifier.o
+arch/arm/mach-tegra/board-cardhu-power.c: In function 'tegra_watchdog_touch':
+arch/arm/mach-tegra/board-cardhu-power.c:1420: warning: unused variable 'val'
+  CC      arch/arm/mach-tegra/board-cardhu-pm299-power-rails.o
+  CC      fs/drop_caches.o
+  CC      mm/msync.o
+  CC      fs/splice.o
+  CC      arch/arm/mach-tegra/board-cardhu-sdhci.o
+  CC      crypto/testmgr.o
+  CC      kernel/ksysfs.o
+  CC      fs/sync.o
+  CC      arch/arm/mach-tegra/board-cardhu-sensors.o
+  CC      arch/arm/mach-tegra/board-cardhu-memory.o
+  CC      kernel/pm_qos_params.o
+  CC      crypto/crypto_wq.o
+  CC      mm/rmap.o
+arch/arm/mach-tegra/board-cardhu-sensors.c: In function 'yuv_sensor_power_off_TF700T':
+arch/arm/mach-tegra/board-cardhu-sensors.c:224: warning: unused variable 'ret'
+  CC      kernel/sched_clock.o
+arch/arm/mach-tegra/board-cardhu-sensors.c: In function 'iCatch7002a_power_on':
+arch/arm/mach-tegra/board-cardhu-sensors.c:751: warning: label 'fail_to_get_reg' defined but not used
+arch/arm/mach-tegra/board-cardhu-sensors.c: In function 'mpuirq_init':
+arch/arm/mach-tegra/board-cardhu-sensors.c:1531: warning: ISO C90 forbids mixed declarations and code
+  LD      crypto/crypto_algapi.o
+  CC      crypto/aead.o
+  CC      fs/utimes.o
+  CC      mm/vmalloc.o
+  CC      kernel/cred.o
+  CC      arch/arm/mach-tegra/board-cardhu-powermon.o
+  CC      fs/stack.o
+  CC      kernel/async.o
+  CC      fs/fs_struct.o
+  CC      fs/statfs.o
+  CC      arch/arm/mach-tegra/board-cardhu-misc.o
+  CC      kernel/range.o
+  LD      crypto/crypto_blkcipher.o
+  CC      crypto/chainiv.o
+arch/arm/mach-tegra/board-cardhu-misc.c:337: warning: initialization from incompatible pointer type
+  CC      kernel/jump_label.o
+  CC      fs/buffer.o
+  CC      fs/bio.o
+  CC      crypto/eseqiv.o
+  CC      arch/arm/mach-tegra/vibrator.o
+  CC      kernel/groups.o
+  LD      crypto/crypto_hash.o
+arch/arm/mach-tegra/vibrator.c: In function 'vibrator_init':
+arch/arm/mach-tegra/vibrator.c:84: warning: assignment from incompatible pointer type
+  CC      crypto/pcompress.o
+  CC      mm/pagewalk.o
+  CC      arch/arm/mach-tegra/baseband-xmm-power.o
+  LD      crypto/cryptomgr.o
+  CC      crypto/hmac.o
+  CC      mm/pgtable-generic.o
+arch/arm/mach-tegra/baseband-xmm-power.c: In function 'store_dwd_reset_modem':
+arch/arm/mach-tegra/baseband-xmm-power.c:336: warning: too few arguments for format
+arch/arm/mach-tegra/baseband-xmm-power.c: At top level:
+arch/arm/mach-tegra/baseband-xmm-power.c:374: warning: initialization from incompatible pointer type
+arch/arm/mach-tegra/baseband-xmm-power.c:375: warning: initialization from incompatible pointer type
+arch/arm/mach-tegra/baseband-xmm-power.c: In function 'baseband_nml_reset_modem':
+arch/arm/mach-tegra/baseband-xmm-power.c:585: warning: 'return' with a value, in function returning void
+arch/arm/mach-tegra/baseband-xmm-power.c:589: warning: too few arguments for format
+arch/arm/mach-tegra/baseband-xmm-power.c:590: warning: 'return' with a value, in function returning void
+  CC      kernel/freezer.o
+arch/arm/mach-tegra/baseband-xmm-power.c: In function 'baseband_modem_crash_dump':
+arch/arm/mach-tegra/baseband-xmm-power.c:638: warning: unused variable 'flags'
+arch/arm/mach-tegra/baseband-xmm-power.c:637: warning: unused variable 'i'
+arch/arm/mach-tegra/baseband-xmm-power.c: In function 'baseband_usb_hsic_host_unregister':
+arch/arm/mach-tegra/baseband-xmm-power.c:669: warning: 'return' with a value, in function returning void
+arch/arm/mach-tegra/baseband-xmm-power.c:674: warning: 'return' with a value, in function returning void
+arch/arm/mach-tegra/baseband-xmm-power.c:680: warning: 'return' with a value, in function returning void
+  CC      kernel/profile.o
+  CC      crypto/md5.o
+  CC      crypto/sha1_generic.o
+  CC      mm/init-mm.o
+  CC      mm/bootmem.o
+  CC      block/elevator.o
+  CC [M]  arch/arm/mach-tegra/baseband-xmm-power2.o
+  LD      drivers/auxdisplay/built-in.o
+  CC      drivers/base/core.o
+  CC      crypto/sha256_generic.o
+  CC      kernel/stacktrace.o
+arch/arm/mach-tegra/baseband-xmm-power2.c: In function 'baseband_xmm_power2_driver_remove':
+arch/arm/mach-tegra/baseband-xmm-power2.c:615: warning: passing argument 1 of 'cancel_work_sync' from incompatible pointer type
+include/linux/workqueue.h:372: note: expected 'struct work_struct *' but argument is of type 'struct baseband_xmm_power_work_t *'
+  CC      fs/block_dev.o
+  CC      mm/memblock.o
+  CC      kernel/irq/irqdesc.o
+  LD      arch/arm/mach-tegra/built-in.o
+  CC      drivers/base/sys.o
+  CC      kernel/power/main.o
+  CC      crypto/ecb.o
+  CC      kernel/irq/handle.o
+  CC      block/blk-core.o
+  CC      mm/bounce.o
+  CC      crypto/cbc.o
+  CC      drivers/base/bus.o
+  CC      fs/direct-io.o
+  CC      kernel/irq/manage.o
+  CC      kernel/power/console.o
+  CC      mm/page_io.o
+  CC      crypto/des_generic.o
+  CC      drivers/base/dd.o
+  CC      kernel/power/process.o
+  CC      kernel/irq/spurious.o
+  CC      fs/mpage.o
+  CC      mm/swap_state.o
+  CC      drivers/base/syscore.o
+  CC      block/blk-tag.o
+  CC      kernel/power/suspend.o
+  CC      kernel/irq/resend.o
+  CC      drivers/base/driver.o
+  CC      crypto/twofish_generic.o
+  CC      drivers/base/class.o
+  CC      kernel/irq/chip.o
+  CC      mm/swapfile.o
+  CC      block/blk-sysfs.o
+  CC      kernel/power/suspend_expire.o
+  CC      fs/ioprio.o
+  CC      kernel/irq/dummychip.o
+  CC      kernel/irq/devres.o
+  CC      drivers/base/platform.o
+  CC      kernel/irq/autoprobe.o
+  CC      crypto/twofish_common.o
+  CC      kernel/irq/proc.o
+  CC      block/blk-flush.o
+  CC      kernel/power/wakelock.o
+  CC      drivers/base/cpu.o
+  CC      kernel/irq/pm.o
+  CC      fs/debugfs/inode.o
+  CC      crypto/aes_generic.o
+  LD      kernel/irq/built-in.o
+  CC      crypto/arc4.o
+  CC      block/blk-settings.o
+  CC      drivers/base/firmware.o
+  CC      fs/debugfs/file.o
+  CC      drivers/base/init.o
+  CC      drivers/base/map.o
+  CC      kernel/power/userwakelock.o
+  CC      kernel/power/earlysuspend.o
+  CC      mm/thrash.o
+  CC      drivers/base/devres.o
+  CC      block/blk-ioc.o
+  LD      fs/debugfs/debugfs.o
+  CC      mm/dmapool.o
+  CC      kernel/power/fbearlysuspend.o
+  LD      fs/debugfs/built-in.o
+  CC      fs/devpts/inode.o
+  CC      fs/ext2/balloc.o
+  CC      drivers/base/attribute_container.o
+  CC      crypto/deflate.o
+  CC      kernel/power/suspend_time.o
+  CC      mm/ashmem.o
+  CC      block/blk-map.o
+  LD      fs/devpts/devpts.o
+  LD      fs/devpts/built-in.o
+  CC      block/blk-exec.o
+  CC      drivers/base/transport_class.o
+  CC      kernel/power/poweroff.o
+  CC      crypto/crc32c.o
+  LD      kernel/power/built-in.o
+  CC      kernel/time/timekeeping.o
+  CC      crypto/authenc.o
+  CC      fs/ext2/dir.o
+  CC      drivers/base/power/sysfs.o
+  CC      mm/slab.o
+  CC      crypto/authencesn.o
+  CC      block/blk-merge.o
+  CC      drivers/base/power/generic_ops.o
+  CC      drivers/base/power/main.o
+  CC      kernel/time/ntp.o
+  CC      block/blk-softirq.o
+  CC      fs/ext2/file.o
+  CC      kernel/time/clocksource.o
+  CC      fs/ext2/ialloc.o
+  CC      crypto/rng.o
+  CC      crypto/krng.o
+  CC      block/blk-timeout.o
+  LD      mm/built-in.o
+  CC      sound/sound_core.o
+  CC      drivers/base/power/wakeup.o
+  CC [M]  crypto/tcrypt.o
+  CC      drivers/base/power/runtime.o
+  CC      kernel/time/jiffies.o
+  LD      sound/arm/built-in.o
+  CC      block/blk-iopoll.o
+  LD      sound/atmel/built-in.o
+  CC      sound/core/hwdep.o
+  CC      fs/ext2/ioctl.o
+  LD      drivers/base/power/built-in.o
+  CC      drivers/base/dma-mapping.o
+  CC      drivers/base/dma-coherent.o
+  LD      crypto/crypto.o
+  CC      sound/core/memalloc.o
+  LD      crypto/built-in.o
+  CC      block/blk-lib.o
+  CC      kernel/time/timecompare.o
+  CC      block/ioctl.o
+  CC      block/genhd.o
+  CC      drivers/base/firmware_class.o
+  CC      kernel/time/timeconv.o
+  CC      fs/ext2/namei.o
+  CC      sound/core/pcm.o
+  CC      kernel/time/posix-clock.o
+  LD      firmware/built-in.o
+
+  CC      drivers/bluetooth/hci_ldisc.o
+  CC      drivers/base/topology.o
+  CC      fs/ext2/super.o
+  CC      kernel/time/clockevents.o
+  CC      drivers/base/module.o
+  CC      sound/core/pcm_native.o
+  CC      block/scsi_ioctl.o
+  LD      drivers/base/built-in.o
+  CC      drivers/bluetooth/hci_h4.o
+  CC      drivers/cdrom/cdrom.o
+  CC      kernel/time/tick-common.o
+  CC      kernel/time/tick-broadcast.o
+  LD      drivers/block/built-in.o
+  CC      sound/core/pcm_lib.o
+  CC      block/noop-iosched.o
+  CC      fs/ext2/symlink.o
+  CC      drivers/bluetooth/hci_ll.o
+  CC      fs/ext2/xattr.o
+  CC      kernel/time/tick-oneshot.o
+  LD      block/built-in.o
+  CC      fs/ext2/xattr_user.o
+  CC      sound/core/pcm_timer.o
+  CC      kernel/time/tick-sched.o
+  CC      drivers/bluetooth/bluesleep.o
+  CC      sound/core/pcm_misc.o
+  CC      fs/ext2/xattr_trusted.o
+  LD      drivers/cdrom/built-in.o
+  CC      sound/core/pcm_memory.o
+  CC      drivers/char/mem.o
+  CC      fs/ext2/acl.o
+  CC      fs/ext2/xattr_security.o
+  CC      kernel/time/timer_stats.o
+  CC      fs/ext3/balloc.o
+  CC      sound/core/timer.o
+  LD      drivers/bluetooth/hci_uart.o
+  LD      drivers/bluetooth/built-in.o
+  LD      sound/drivers/mpu401/built-in.o
+  LD      sound/drivers/opl3/built-in.o
+  CC      fs/ext4/balloc.o
+  LD      sound/drivers/opl4/built-in.o
+  LD      sound/drivers/pcsp/built-in.o
+  LD      sound/drivers/vx/built-in.o
+  LD      sound/drivers/built-in.o
+  CC      drivers/char/random.o
+  LD      fs/ext2/ext2.o
+  CC      drivers/clk/clkdev.o
+  LD      fs/ext2/built-in.o
+  CC      fs/fat/cache.o
+  LD      kernel/time/built-in.o
+  CC      kernel/trace/trace_clock.o
+  LD      drivers/clk/built-in.o
+  CC      kernel/trace/ring_buffer.o
+  CC      fs/ext3/bitmap.o
+  CC      fs/fat/dir.o
+  CC      fs/ext4/bitmap.o
+  CC      fs/fat/fatent.o
+  CC      drivers/char/misc.o
+  CC      fs/ext3/dir.o
+  CC      sound/core/sound.o
+  CC      fs/ext4/dir.o
+  LD      drivers/char/built-in.o
+  LD      drivers/clocksource/built-in.o
+  CC      drivers/cpufreq/cpufreq.o
+drivers/cpufreq/cpufreq.c: In function '__cpufreq_set_policy':
+drivers/cpufreq/cpufreq.c:1751: warning: comparison of distinct pointer types lacks a cast
+drivers/cpufreq/cpufreq.c:1752: warning: comparison of distinct pointer types lacks a cast
+  CC      fs/ext3/file.o
+  LD      sound/firewire/built-in.o
+  LD      sound/i2c/other/built-in.o
+  LD      sound/i2c/built-in.o
+  CC      sound/core/init.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprof.o
+fs/fat/dir.c: In function 'fat_add_entries':
+fs/fat/dir.c:43: warning: 'de' may be used uninitialized in this function
+fs/fat/dir.c:1240: note: 'de' was declared here
+  CC      fs/ext3/fsync.o
+  CC      fs/ext4/file.o
+  CC      fs/fat/file.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/cpu_buffer.o
+  LD      kernel/trace/built-in.o
+  CC      drivers/cpufreq/cpufreq_stats.o
+  CC      fs/ext3/ialloc.o
+  CC      kernel/futex.o
+  CC      sound/core/memory.o
+  CC      sound/core/info.o
+  CC      fs/ext4/fsync.o
+  CC      fs/fat/inode.o
+  CC      drivers/cpufreq/cpufreq_performance.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/buffer_sync.o
+  CC      drivers/cpufreq/cpufreq_powersave.o
+  CC      fs/ext3/inode.o
+  CC      fs/ext4/ialloc.o
+  CC      drivers/cpufreq/cpufreq_userspace.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/event_buffer.o
+  CC      sound/core/control.o
+drivers/cpufreq/cpufreq_userspace.c: In function 'cpufreq_set_userspace_governor':
+drivers/cpufreq/cpufreq_userspace.c:110: warning: unused variable 'cpu0_set'
+drivers/cpufreq/cpufreq_userspace.c:104: warning: unused variable 'old_governor'
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofile_files.o
+  CC      drivers/cpufreq/cpufreq_ondemand.o
+  CC      fs/fat/misc.o
+  CC      fs/ext4/inode.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofilefs.o
+  CC      sound/core/misc.o
+  CC      kernel/smp.o
+  CC      fs/fat/namei_vfat.o
+  CC      drivers/cpufreq/cpufreq_conservative.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofile_stats.o
+  CC      sound/core/device.o
+  CC      fs/ext3/ioctl.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/timer_int.o
+  CC      kernel/spinlock.o
+  CC      sound/core/vmaster.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofile_perf.o
+  CC      drivers/cpufreq/cpufreq_interactive.o
+  LD      fs/fat/fat.o
+  LD      fs/fat/vfat.o
+  LD      fs/fat/built-in.o
+  CC      sound/core/jack.o
+  CC      fs/ext3/namei.o
+  CC      fs/ext4/page-io.o
+  CC      kernel/uid16.o
+drivers/cpufreq/cpufreq_interactive.c: In function 'store_min_sample_input_time':
+drivers/cpufreq/cpufreq_interactive.c:642: warning: ignoring return value of 'kstrtoul', declared with attribute warn_unused_result
+drivers/cpufreq/cpufreq_interactive.c: In function 'cpufreq_governor_interactive':
+drivers/cpufreq/cpufreq_interactive.c:823: warning: ignoring return value of 'input_register_handler', declared with attribute warn_unused_result
+  CC      arch/arm/oprofile/common.o
+  LD      sound/core/snd.o
+  LD      sound/core/snd-hwdep.o
+  LD      sound/core/snd-timer.o
+  LD      sound/core/snd-pcm.o
+  LD      sound/core/snd-page-alloc.o
+  LD      sound/core/built-in.o
+  CC      drivers/cpufreq/freq_table.o
+  LD      sound/isa/ad1816a/built-in.o
+  LD      sound/isa/ad1848/built-in.o
+  CC      fs/ext4/ioctl.o
+  LD      sound/isa/cs423x/built-in.o
+  LD      sound/isa/es1688/built-in.o
+  LD      sound/isa/galaxy/built-in.o
+  LD      sound/isa/gus/built-in.o
+  CC      kernel/module.o
+  LD      sound/isa/msnd/built-in.o
+  LD      arch/arm/oprofile/oprofile.o
+  LD      sound/isa/opti9xx/built-in.o
+  LD      sound/isa/sb/built-in.o
+  LD      arch/arm/oprofile/built-in.o
+  CC      fs/ext3/super.o
+  LD      sound/isa/wavefront/built-in.o
+  LD      drivers/cpufreq/built-in.o
+  LD      sound/isa/wss/built-in.o
+  CC      drivers/cpuidle/cpuidle.o
+  LD      sound/isa/built-in.o
+  LD      sound/mips/built-in.o
+  LD      sound/parisc/built-in.o
+  LD      sound/pci/ac97/built-in.o
+  LD      sound/pcmcia/pdaudiocf/built-in.o
+  LD      sound/pcmcia/vx/built-in.o
+  LD      sound/pci/ali5451/built-in.o
+  LD      sound/pcmcia/built-in.o
+  LD      sound/pci/asihpi/built-in.o
+  LD      sound/ppc/built-in.o
+  LD      sound/pci/au88x0/built-in.o
+  LD      sound/pci/aw2/built-in.o
+  LD      sound/sh/built-in.o
+  LD      sound/pci/ca0106/built-in.o
+  CC      sound/soc/soc-core.o
+  LD      sound/pci/cs46xx/built-in.o
+  LD      sound/pci/cs5535audio/built-in.o
+  CC      fs/fuse/dev.o
+  LD      sound/pci/ctxfi/built-in.o
+  LD      sound/pci/echoaudio/built-in.o
+  LD      sound/pci/emu10k1/built-in.o
+  CC      sound/pci/hda/patch_analog.o
+  CC      drivers/cpuidle/driver.o
+  CC      fs/ext4/namei.o
+  CC      drivers/cpuidle/governor.o
+  CC      drivers/cpuidle/sysfs.o
+  CC      fs/ext3/symlink.o
+  CC      drivers/cpuidle/governors/ladder.o
+  CC      fs/fuse/dir.o
+  CC      fs/ext3/hash.o
+  CC      drivers/cpuidle/governors/menu.o
+  CC      sound/soc/soc-dapm.o
+  CC      sound/pci/hda/patch_ca0110.o
+  CC      kernel/kallsyms.o
+  CC      fs/ext4/super.o
+  LD      drivers/cpuidle/governors/built-in.o
+  LD      drivers/cpuidle/built-in.o
+  CC      drivers/crypto/tegra-se.o
+  CC      fs/ext3/resize.o
+  CC      kernel/cgroup.o
+  CC      sound/pci/hda/patch_cirrus.o
+  CC      fs/ext3/ext3_jbd.o
+  CC      fs/fuse/file.o
+  CC      sound/soc/soc-jack.o
+  CC      fs/ext3/xattr.o
+  CC      sound/pci/hda/patch_cmedia.o
+  LD      drivers/crypto/built-in.o
+  LD      drivers/firewire/built-in.o
+  LD      drivers/firmware/built-in.o
+  CC      drivers/gpio/gpiolib.o
+  CC      sound/soc/soc-cache.o
+  CC      fs/ext3/xattr_user.o
+  CC      fs/fuse/inode.o
+  CC      fs/ext4/symlink.o
+  CC      sound/pci/hda/patch_conexant.o
+  CC      fs/ext4/hash.o
+  CC      fs/ext3/xattr_trusted.o
+  CC      sound/soc/soc-utils.o
+  LD      drivers/gpio/built-in.o
+  CC      fs/ext3/acl.o
+  LD      drivers/gpu/drm/i2c/built-in.o
+  LD      drivers/gpu/drm/built-in.o
+  LD      drivers/gpu/stub/built-in.o
+  CC      drivers/gpu/vga/vgaarb.o
+  CC      fs/ext4/resize.o
+  CC      kernel/cgroup_freezer.o
+  CC      fs/fuse/control.o
+  LD      sound/soc/atmel/built-in.o
+  LD      sound/soc/au1x/built-in.o
+  LD      sound/soc/blackfin/built-in.o
+  CC      sound/soc/codecs/rt5631.o
+  CC      fs/ext3/xattr_security.o
+  LD      drivers/gpu/vga/built-in.o
+  LD      drivers/gpu/built-in.o
+  CC      drivers/hid/hid-debug.o
+sound/soc/codecs/rt5631.c:1976: warning: function declaration isn't a prototype
+sound/soc/codecs/rt5631.c: In function 'rt5631_resume':
+sound/soc/codecs/rt5631.c:2618: warning: ISO C90 forbids mixed declarations and code
+sound/soc/codecs/rt5631.c: In function 'rt5631_i2c_probe':
+sound/soc/codecs/rt5631.c:2699: warning: assignment from incompatible pointer type
+sound/soc/codecs/rt5631.c: At top level:
+sound/soc/codecs/rt5631.c:2727: warning: initialization from incompatible pointer type
+sound/soc/codecs/rt5631.c: In function 'codec_3v3_power_switch_init':
+sound/soc/codecs/rt5631.c:2735: warning: ISO C90 forbids mixed declarations and code
+  GZIP    kernel/config_data.gz
+  CC      kernel/res_counter.o
+  LD      fs/ext3/ext3.o
+  LD      fs/fuse/fuse.o
+  CC      sound/pci/hda/patch_hdmi.o
+  LD      fs/fuse/built-in.o
+  LD      fs/ext3/built-in.o
+  CC      fs/ext4/extents.o
+  CC      drivers/hwmon/hwmon.o
+  CC      fs/ext4/ext4_jbd2.o
+  CC      kernel/stop_machine.o
+  CC      drivers/hwmon/tegra-tsensor.o
+  CC      drivers/hid/hid-core.o
+kernel/stop_machine.c: In function '__stop_cpus':
+kernel/stop_machine.c:208: warning: unused variable 'i'
+  CC      kernel/watchdog.o
+drivers/hwmon/tegra-tsensor.c: In function 'tsensor_work_func':
+drivers/hwmon/tegra-tsensor.c:1545: warning: initialization from incompatible pointer type
+  CC      sound/pci/hda/hda_eld.o
+  CC      net/socket.o
+  CC      kernel/rcutree.o
+  CC      drivers/hid/hid-input.o
+  CC      sound/soc/codecs/spdif_transciever.o
+  CC      drivers/hwmon/al3010.o
+  CC      sound/pci/hda/patch_sigmatel.o
+  CC      sound/soc/codecs/wm8903.o
+drivers/hwmon/al3010.c:86: warning: function declaration isn't a prototype
+drivers/hwmon/al3010.c: In function 'control_als_cam_2v85':
+drivers/hwmon/al3010.c:109: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: In function '__al3010_write_reg':
+drivers/hwmon/al3010.c:179: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: In function 'al3010_get_adc_value':
+drivers/hwmon/al3010.c:249: warning: unused variable 'range'
+drivers/hwmon/al3010.c: At top level:
+drivers/hwmon/al3010.c:306: warning: function declaration isn't a prototype
+drivers/hwmon/al3010.c: In function 'al3010_update_calibration':
+drivers/hwmon/al3010.c:313: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: In function 'al3010_show_revise_lux':
+drivers/hwmon/al3010.c:398: warning: format '%d' expects type 'int', but argument 2 has type '__kernel_time_t'
+drivers/hwmon/al3010.c:399: warning: format '%d' expects type 'int', but argument 2 has type '__kernel_suseconds_t'
+drivers/hwmon/al3010.c:406: warning: format '%d' expects type 'int', but argument 2 has type '__kernel_time_t'
+drivers/hwmon/al3010.c:407: warning: format '%d' expects type 'int', but argument 2 has type '__kernel_suseconds_t'
+drivers/hwmon/al3010.c:418: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: In function 'al3010_show_default_lux':
+drivers/hwmon/al3010.c:481: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: In function 'al3010_init_client':
+drivers/hwmon/al3010.c:509: warning: unused variable 'data'
+drivers/hwmon/al3010.c: At top level:
+drivers/hwmon/al3010.c:587: warning: initialization from incompatible pointer type
+drivers/hwmon/al3010.c: In function 'al3010_poll_data':
+drivers/hwmon/al3010.c:594: warning: unused variable 'lux'
+drivers/hwmon/al3010.c:656:10: warning: unknown escape sequence '\m'
+drivers/hwmon/al3010.c: In function 'al3010_suspend':
+drivers/hwmon/al3010.c:684: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: In function 'al3010_resume':
+drivers/hwmon/al3010.c:701: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c:703: warning: unused variable 'data'
+drivers/hwmon/al3010.c:701: warning: unused variable 'i'
+drivers/hwmon/al3010.c: In function 'al3010_init':
+drivers/hwmon/al3010.c:738: warning: ISO C90 forbids mixed declarations and code
+drivers/hwmon/al3010.c: At top level:
+drivers/hwmon/al3010.c:507: warning: 'al3010_init_client' defined but not used
+drivers/hwmon/al3010.c:208: warning: 'al3010_get_resolution' defined but not used
+drivers/hwmon/al3010.c:213: warning: 'al3010_set_resolution' defined but not used
+drivers/hwmon/al3010.c:219: warning: 'al3010_get_mode' defined but not used
+drivers/hwmon/al3010.c:225: warning: 'al3010_set_mode' defined but not used
+sound/soc/codecs/wm8903.c:246:1: warning: "INPUT_SOURCE_AGC" redefined
+sound/soc/codecs/wm8903.c:242:1: warning: this is the location of the previous definition
+sound/soc/codecs/wm8903.c:304: warning: function declaration isn't a prototype
+sound/soc/codecs/wm8903.c: In function 'wm8903_spk_event':
+sound/soc/codecs/wm8903.c:493: warning: unused variable 'shift'
+sound/soc/codecs/wm8903.c:492: warning: unused variable 'dcs_bit'
+sound/soc/codecs/wm8903.c:491: warning: unused variable 'dcs_reg'
+sound/soc/codecs/wm8903.c:490: warning: unused variable 'reg'
+sound/soc/codecs/wm8903.c:489: warning: unused variable 'val'
+sound/soc/codecs/wm8903.c: In function 'wm8903_get_gain':
+sound/soc/codecs/wm8903.c:848: warning: unused variable 'wm8903'
+sound/soc/codecs/wm8903.c: In function 'wm8903_set_gain':
+sound/soc/codecs/wm8903.c:857: warning: unused variable 'wm8903'
+  CC      kernel/utsname_sysctl.o
+sound/soc/codecs/wm8903.c: In function 'wm8903_resume':
+sound/soc/codecs/wm8903.c:2204: warning: ISO C90 forbids mixed declarations and code
+sound/soc/codecs/wm8903.c: In function 'wm8903_i2c_probe':
+sound/soc/codecs/wm8903.c:2530: warning: assignment from incompatible pointer type
+sound/soc/codecs/wm8903.c: At top level:
+sound/soc/codecs/wm8903.c:2573: warning: initialization from incompatible pointer type
+sound/soc/codecs/wm8903.c:1842: warning: 'bclk_divs' defined but not used
+  CC      fs/ext4/migrate.o
+  LD      drivers/hwmon/built-in.o
+  CC      kernel/elfcore.o
+  CC      kernel/sched_cpupri.o
+  CC      drivers/hid/hid-apple.o
+  LD      net/802/built-in.o
+  CC      net/bluetooth/af_bluetooth.o
+  CC      drivers/i2c/i2c-boardinfo.o
+  CC      kernel/irq_work.o
+  LD      sound/soc/codecs/snd-soc-rt5631.o
+  LD      sound/soc/codecs/snd-soc-spdif.o
+  LD      sound/soc/codecs/snd-soc-wm8903.o
+  LD      sound/soc/codecs/built-in.o
+  LD      sound/soc/davinci/built-in.o
+  CC      kernel/perf_event.o
+  LD      sound/soc/ep93xx/built-in.o
+  LD      sound/soc/fsl/built-in.o
+  CC      fs/ext4/mballoc.o
+  LD      sound/soc/imx/built-in.o
+  CC      drivers/hid/hid-sony.o
+  CC      drivers/i2c/i2c-core.o
+  LD      sound/soc/jz4740/built-in.o
+  LD      sound/soc/kirkwood/built-in.o
+  LD      sound/soc/mid-x86/built-in.o
+  LD      sound/soc/nuc900/built-in.o
+  LD      sound/soc/omap/built-in.o
+  LD      sound/soc/pxa/built-in.o
+  LD      sound/soc/s6000/built-in.o
+  LD      sound/soc/samsung/built-in.o
+  LD      sound/soc/sh/built-in.o
+  CC      sound/soc/tegra/tegra_pcm.o
+  CC      net/bluetooth/hci_core.o
+  CC      sound/pci/hda/patch_realtek.o
+  CC      drivers/hid/usbhid/hid-core.o
+  CC      sound/soc/tegra/tegra_rt5631.o
+sound/soc/tegra/tegra_rt5631.c: In function 'tegra_rt5631_init':
+sound/soc/tegra/tegra_rt5631.c:153: warning: unused variable 'machine'
+sound/soc/tegra/tegra_rt5631.c: In function 'tegra_rt5631_modinit':
+sound/soc/tegra/tegra_rt5631.c:289: warning: ISO C90 forbids mixed declarations and code
+  CC      drivers/i2c/i2c-dev.o
+  CC      sound/soc/tegra/tegra_asoc_utils.o
+sound/soc/tegra/tegra_asoc_utils.c: In function 'tegra_asoc_utils_init':
+sound/soc/tegra/tegra_asoc_utils.c:148: warning: unused variable 'rate'
+  CC      sound/soc/tegra/tegra_wm8903.o
+  CC      drivers/hid/usbhid/hid-quirks.o
+  CC      drivers/i2c/i2c-mux.o
+sound/soc/tegra/tegra_wm8903.c: In function 'tegra_wm8903_init':
+sound/soc/tegra/tegra_wm8903.c:531: warning: unused variable 'pdata'
+sound/soc/tegra/tegra_wm8903.c: In function 'tegra_wm8903_modinit':
+sound/soc/tegra/tegra_wm8903.c:750: warning: ISO C90 forbids mixed declarations and code
+sound/soc/tegra/tegra_wm8903.c: At top level:
+sound/soc/tegra/tegra_wm8903.c:332: warning: 'tegra_wm8903_mic_jack' defined but not used
+sound/soc/tegra/tegra_wm8903.c:388: warning: 'tegra_wm8903_jack_detect_nb' defined but not used
+sound/soc/tegra/tegra_wm8903.c:407: warning: 'tegra_wm8903_event_int_spk' defined but not used
+sound/soc/tegra/tegra_wm8903.c:431: warning: 'tegra_wm8903_event_hp' defined but not used
+sound/soc/tegra/tegra_wm8903.c:448: warning: 'tegra_wm8903_event_int_mic' defined but not used
+sound/soc/tegra/tegra_wm8903.c:472: warning: 'tegra_wm8903_event_ext_mic' defined but not used
+sound/soc/tegra/tegra_wm8903.c:575: warning: 'tegra30_soc_set_bias_level' defined but not used
+sound/soc/tegra/tegra_wm8903.c:587: warning: 'tegra30_soc_set_bias_level_post' defined but not used
+  CC      sound/soc/tegra/tegra30_ahub.o
+  LD      drivers/hid/usbhid/usbhid.o
+  LD      drivers/hid/usbhid/built-in.o
+  LD      drivers/hid/hid.o
+  LD      drivers/hid/built-in.o
+  CC      net/bluetooth/hci_conn.o
+  CC      fs/isofs/namei.o
+  LD      drivers/i2c/algos/built-in.o
+  CC      drivers/i2c/busses/i2c-tegra.o
+  CC      sound/soc/tegra/tegra30_dam.o
+  CC      fs/isofs/inode.o
+  LD      drivers/i2c/busses/built-in.o
+  LD      drivers/i2c/muxes/built-in.o
+  LD      drivers/i2c/built-in.o
+  CC      net/bluetooth/hci_event.o
+  LD      drivers/idle/built-in.o
+  CC      fs/ext4/block_validity.o
+  LD      drivers/ieee802154/built-in.o
+  CC      drivers/input/input.o
+  CC      sound/soc/tegra/tegra30_i2s.o
+  CC      kernel/hw_breakpoint.o
+  CC      fs/isofs/dir.o
+  CC      fs/ext4/move_extent.o
+  CC      sound/soc/tegra/tegra30_spdif.o
+  CC      fs/isofs/util.o
+  CC      sound/pci/hda/patch_si3054.o
+  CC      fs/isofs/rock.o
+  CC      kernel/time.o
+  CC      sound/soc/tegra/headset.o
+  CC      sound/pci/hda/patch_via.o
+sound/soc/tegra/headset.c: In function 'headset_init':
+sound/soc/tegra/headset.c:414: warning: ISO C90 forbids mixed declarations and code
+  CC      drivers/input/input-compat.o
+  CC      fs/ext4/xattr.o
+  CC      fs/isofs/export.o
+  IKCFG   kernel/config_data.h
+  CC      kernel/configs.o
+  CC      sound/soc/tegra/dsp/dsp.o
+  CC      drivers/input/input-mt.o
+  LD      kernel/built-in.o
+  LD      fs/isofs/isofs.o
+sound/soc/tegra/dsp/dsp.c: In function 'fm34_probe':
+sound/soc/tegra/dsp/dsp.c:634: warning: assignment from incompatible pointer type
+sound/soc/tegra/dsp/dsp.c:635: warning: assignment from incompatible pointer type
+sound/soc/tegra/dsp/dsp.c: In function 'fm34_suspend':
+sound/soc/tegra/dsp/dsp.c:716: warning: ISO C90 forbids mixed declarations and code
+sound/soc/tegra/dsp/dsp.c:719: warning: ISO C90 forbids mixed declarations and code
+sound/soc/tegra/dsp/dsp.c: In function 'fm34_resume':
+sound/soc/tegra/dsp/dsp.c:748: warning: ISO C90 forbids mixed declarations and code
+sound/soc/tegra/dsp/dsp.c: In function 'fm34_init':
+sound/soc/tegra/dsp/dsp.c:763: warning: ISO C90 forbids mixed declarations and code
+sound/soc/tegra/dsp/dsp.c: In function 'fm34_check_i2c':
+sound/soc/tegra/dsp/dsp.c:321: warning: control reaches end of non-void function
+  LD      fs/isofs/built-in.o
+  CC      fs/ext4/xattr_user.o
+  CC      drivers/input/ff-core.o
+  LD      sound/soc/tegra/dsp/built-in.o
+  LD      sound/soc/tegra/snd-soc-tegra-pcm.o
+  CC      net/caif/caif_dev.o
+  LD      sound/soc/tegra/snd-soc-tegra-utils.o
+  LD      sound/soc/tegra/snd-soc-tegra30-ahub.o
+  LD      sound/soc/tegra/snd-soc-tegra30-dam.o
+  LD      sound/soc/tegra/snd-soc-tegra30-i2s.o
+  LD      sound/soc/tegra/snd-soc-tegra30-spdif.o
+  LD      sound/soc/tegra/snd-soc-tegra-rt5631.o
+  LD      sound/soc/tegra/snd-soc-tegra-wm8903.o
+  LD      sound/sparc/built-in.o
+  CC      net/bluetooth/mgmt.o
+  LD      sound/soc/tegra/built-in.o
+  CC      fs/ext4/xattr_trusted.o
+  CC      drivers/input/joydev.o
+  LD      sound/soc/txx9/built-in.o
+  LD      sound/soc/snd-soc-core.o
+  CC      drivers/input/evdev.o
+  LD      sound/soc/built-in.o
+  CC      fs/ext4/acl.o
+  CC      drivers/input/asusec/asuspec.o
+  CC      drivers/input/asusec/asusdec.o
+  CC      net/caif/cfcnfg.o
+  CC      sound/pci/hda/hda_codec.o
+drivers/input/asusec/asuspec.c: In function 'asuspec_irq_ec_request':
+drivers/input/asusec/asuspec.c:469: warning: unused variable 'irq'
+drivers/input/asusec/asusdec.c: In function 'asusdec_fw_reset_ec_op':
+drivers/input/asusec/asusdec.c:443: warning: unused variable 'r_data'
+drivers/input/asusec/asusdec.c: In function 'asusdec_fw_address_set_op':
+drivers/input/asusec/asusdec.c:458: warning: unused variable 'r_data'
+drivers/input/asusec/asusdec.c: In function 'asusdec_fw_enter_op':
+drivers/input/asusec/asusdec.c:477: warning: unused variable 'r_data'
+drivers/input/asusec/asusdec.c: In function 'asusdec_irq_ec_request':
+drivers/input/asusec/asusdec.c:854: warning: unused variable 'irq'
+drivers/input/asusec/asusdec.c: In function 'asusdec_dock_init_work_function':
+drivers/input/asusec/asusdec.c:1467: warning: unused variable 'irq'
+drivers/input/asusec/asusdec.c: In function 'asusdec_show_dock_battery_status':
+drivers/input/asusec/asusdec.c:1937: warning: unused variable 'bat_percentage'
+drivers/input/asusec/asusdec.c: In function 'asusdec_ioctl':
+drivers/input/asusec/asusdec.c:2149: warning: assignment makes integer from pointer without a cast
+drivers/input/asusec/asusdec.c:2165: warning: format '%d' expects type 'int', but argument 3 has type 'long unsigned int'
+drivers/input/asusec/asusdec.c: In function 'asusdec_dock_battery_get_status':
+drivers/input/asusec/asusdec.c:2367: warning: unused variable 'bat_percentage'
+drivers/input/asusec/asuspec.c: In function 'asuspec_battery_show':
+drivers/input/asusec/asuspec.c:759: warning: 'ret_val' is used uninitialized in this function
+drivers/input/asusec/asusdec.c: At top level:
+drivers/input/asusec/asusdec.c:1396: warning: 'asusdec_get_version_num' defined but not used
+  CC      drivers/input/joystick/xpad.o
+  LD      fs/ext4/ext4.o
+  CC      net/caif/cfmuxl.o
+  LD      fs/ext4/built-in.o
+  CC      fs/jbd/transaction.o
+  CC      drivers/input/keyboard/gpio_keys.o
+  LD      drivers/input/joystick/built-in.o
+  CC      sound/pci/hda/hda_generic.o
+  CC      net/bluetooth/hci_sock.o
+  CC      net/caif/cfctrl.o
+  CC      drivers/input/asusec/elan_i2c_asus.o
+  CC      net/caif/cffrml.o
+  CC      drivers/input/keyboard/interrupt_keys.o
+drivers/input/asusec/elan_i2c_asus.c: In function 'elan_i2c_asus_cmd':
+drivers/input/asusec/elan_i2c_asus.c:33: warning: unused variable 'index'
+  LD      drivers/input/asusec/built-in.o
+  CC      sound/pci/hda/hda_proc.o
+  CC      drivers/input/keyboard/tegra-kbc.o
+  CC      net/core/sock.o
+  CC      net/caif/cfveil.o
+  CC      net/bluetooth/hci_sysfs.o
+  CC      fs/jbd/commit.o
+  CC      net/caif/cfdbgl.o
+  LD      drivers/input/keyboard/built-in.o
+  CC      net/caif/cfserl.o
+  CC      sound/pci/hda/hda_intel.o
+  CC      drivers/input/misc/gpio_event.o
+  LD      sound/pci/ice1712/built-in.o
+  CC      fs/jbd2/transaction.o
+  CC      net/caif/cfdgml.o
+  CC      net/caif/cfrfml.o
+  CC      drivers/input/misc/gpio_matrix.o
+  CC      net/bluetooth/lib.o
+  CC      net/caif/cfvidl.o
+  CC      net/caif/cfutill.o
+  CC      fs/jbd/recovery.o
+  CC      drivers/input/misc/gpio_input.o
+  CC      net/bluetooth/l2cap_core.o
+  CC      net/caif/cfsrvl.o
+  CC      net/caif/cfpkt_skbuff.o
+  CC      net/core/request_sock.o
+  CC      fs/jbd2/commit.o
+  CC      fs/jbd/checkpoint.o
+  CC      drivers/input/misc/gpio_output.o
+  CC      drivers/input/misc/gpio_axis.o
+  CC      net/caif/cfusbl.o
+  LD      sound/pci/hda/snd-hda-codec.o
+  LD      sound/pci/hda/snd-hda-codec-realtek.o
+  LD      sound/pci/hda/snd-hda-codec-cmedia.o
+  LD      sound/pci/hda/snd-hda-codec-analog.o
+  CC      net/core/skbuff.o
+  LD      sound/pci/hda/snd-hda-codec-idt.o
+  LD      sound/pci/hda/snd-hda-codec-si3054.o
+  LD      sound/pci/hda/snd-hda-codec-cirrus.o
+  LD      sound/pci/hda/snd-hda-codec-ca0110.o
+  CC      drivers/input/misc/uinput.o
+  CC      fs/jbd/revoke.o
+  LD      sound/pci/hda/snd-hda-codec-conexant.o
+  LD      sound/pci/hda/snd-hda-codec-via.o
+  LD      sound/pci/hda/snd-hda-codec-hdmi.o
+  LD      sound/pci/hda/snd-hda-intel.o
+  LD      sound/pci/hda/built-in.o
+  LD      sound/pci/korg1212/built-in.o
+  LD      sound/pci/lx6464es/built-in.o
+  LD      sound/pci/mixart/built-in.o
+  CC      fs/jbd2/recovery.o
+  LD      sound/pci/nm256/built-in.o
+  LD      sound/pci/oxygen/built-in.o
+  LD      sound/pci/pcxhr/built-in.o
+  LD      sound/pci/riptide/built-in.o
+  CC      fs/jbd/journal.o
+  LD      sound/pci/rme9652/built-in.o
+  CC      net/caif/chnl_net.o
+  LD      sound/pci/trident/built-in.o
+  LD      drivers/input/misc/built-in.o
+  LD      sound/pci/vx222/built-in.o
+  CC      drivers/input/touchscreen/atmel_maxtouch.o
+  LD      sound/pci/ymfpci/built-in.o
+  LD      sound/pci/built-in.o
+  CC      fs/jbd2/checkpoint.o
+  LD      sound/spi/built-in.o
+  LD      sound/synth/built-in.o
+drivers/input/touchscreen/atmel_maxtouch.c:268: warning: missing braces around initializer
+drivers/input/touchscreen/atmel_maxtouch.c:268: warning: (near initialization for 'fingerInfo[0]')
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'touch_cdev_write':
+drivers/input/touchscreen/atmel_maxtouch.c:488: warning: too many arguments for format
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'touch_cdev_ioctl':
+drivers/input/touchscreen/atmel_maxtouch.c:581: warning: ISO C90 forbids mixed declarations and code
+drivers/input/touchscreen/atmel_maxtouch.c:575: warning: unused variable 'cdev'
+drivers/input/touchscreen/atmel_maxtouch.c: At top level:
+drivers/input/touchscreen/atmel_maxtouch.c:648: warning: initialization from incompatible pointer type
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'store_d_print':
+drivers/input/touchscreen/atmel_maxtouch.c:799: warning: unused variable 'client'
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'dump_T7':
+drivers/input/touchscreen/atmel_maxtouch.c:825: warning: zero-length gnu_printf format string
+drivers/input/touchscreen/atmel_maxtouch.c:893: warning: format '%lx' expects type 'long unsigned int', but argument 4 has type 'u32'
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'dump_T48':
+drivers/input/touchscreen/atmel_maxtouch.c:908: warning: zero-length gnu_printf format string
+  LD      sound/usb/6fire/built-in.o
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'store_mode2':
+drivers/input/touchscreen/atmel_maxtouch.c:1024: warning: unused variable 'pch'
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'force_release_pos':
+drivers/input/touchscreen/atmel_maxtouch.c:1740: warning: ISO C90 forbids mixed declarations and code
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'process_message':
+drivers/input/touchscreen/atmel_maxtouch.c:2009: warning: format '%lx' expects type 'long unsigned int', but argument 2 has type 'u32'
+drivers/input/touchscreen/atmel_maxtouch.c:1932: warning: unused variable 'noise_count'
+  LD      sound/usb/caiaq/built-in.o
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'recovery_from_bootMode':
+drivers/input/touchscreen/atmel_maxtouch.c:2317: warning: unused variable 'identified'
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'isInBootLoaderMode':
+drivers/input/touchscreen/atmel_maxtouch.c:2351: warning: unused variable 'identified'
+drivers/input/touchscreen/atmel_maxtouch.c: At top level:
+drivers/input/touchscreen/atmel_maxtouch.c:2789: warning: function declaration isn't a prototype
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'update_noise_state':
+drivers/input/touchscreen/atmel_maxtouch.c:2793: warning: ISO C90 forbids mixed declarations and code
+drivers/input/touchscreen/atmel_maxtouch.c: In function 'mxt_stress_ioctl':
+drivers/input/touchscreen/atmel_maxtouch.c:2886: warning: too many arguments for format
+drivers/input/touchscreen/atmel_maxtouch.c: At top level:
+drivers/input/touchscreen/atmel_maxtouch.c:2932: warning: initialization from incompatible pointer type
+drivers/input/touchscreen/atmel_maxtouch.c:336: warning: 'wait_command_ack' defined but not used
+drivers/input/touchscreen/atmel_maxtouch.c:1632: warning: 'mxt_write_mem_bl' defined but not used
+drivers/input/touchscreen/atmel_maxtouch.c:1645: warning: 'mxt_read_mem_bl' defined but not used
+  LD      sound/usb/misc/built-in.o
+  LD      sound/usb/usx2y/built-in.o
+  LD      sound/usb/built-in.o
+  CC      sound/last.o
+  CC      net/caif/caif_socket.o
+  CC      fs/jbd2/revoke.o
+  LD      sound/soundcore.o
+  LD      sound/built-in.o
+  LD      fs/jbd/jbd.o
+  CC      drivers/input/touchscreen/mxt_config.o
+  LD      fs/jbd/built-in.o
+  CC      net/core/iovec.o
+  CC      drivers/input/touchscreen/ektf3k.o
+  CC      net/bluetooth/l2cap_sock.o
+drivers/input/touchscreen/ektf3k.c: In function 'elan_ktf3k_ts_read_command':
+drivers/input/touchscreen/ektf3k.c:453: warning: unused variable 'le_addr'
+drivers/input/touchscreen/ektf3k.c: In function 'elan_ktf3k_i2c_read_packet':
+drivers/input/touchscreen/ektf3k.c:482: warning: unused variable 'le_addr'
+drivers/input/touchscreen/ektf3k.c: In function 'elan_ktf3k_ts_get_power_source':
+drivers/input/touchscreen/ektf3k.c:785: warning: unused variable 'power_source'
+drivers/input/touchscreen/ektf3k.c: At top level:
+drivers/input/touchscreen/ektf3k.c:795: warning: function declaration isn't a prototype
+drivers/input/touchscreen/ektf3k.c: In function 'elan_stress_ioctl':
+drivers/input/touchscreen/ektf3k.c:1170: warning: too many arguments for format
+drivers/input/touchscreen/ektf3k.c: At top level:
+drivers/input/touchscreen/ektf3k.c:1208: warning: initialization from incompatible pointer type
+drivers/input/touchscreen/ektf3k.c:367: warning: 'elan_ktf3k_touch_sysfs_init' defined but not used
+drivers/input/touchscreen/mxt_config.c: In function 'init_touch_config_v2':
+drivers/input/touchscreen/mxt_config.c:78: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:87: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:103: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:109: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:128: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:151: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:157: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:214: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:227: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:233: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:239: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c: In function 'init_touch_config':
+drivers/input/touchscreen/mxt_config.c:323: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:332: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:338: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:354: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:360: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:366: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:385: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:408: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:414: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/mxt_config.c:467: warning: assignment discards qualifiers from pointer target type
+drivers/input/touchscreen/ektf3k.c: In function 'ektf_proc_write':
+drivers/input/touchscreen/ektf3k.c:1127: warning: 'ret' may be used uninitialized in this function
+  CC      fs/jbd2/journal.o
+  CC      net/core/datagram.o
+  LD      net/caif/caif.o
+  LD      net/caif/built-in.o
+  CC      fs/lockd/clntlock.o
+  CC      net/core/stream.o
+  CC      net/bluetooth/sco.o
+  CC      net/bluetooth/bnep/core.o
+  CC      net/bluetooth/hidp/core.o
+  LD      drivers/input/touchscreen/built-in.o
+  CC      drivers/input/keyreset.o
+  CC      net/core/scm.o
+  CC      fs/lockd/clntproc.o
+  CC      fs/lockd/clntxdr.o
+  LD      drivers/input/input-core.o
+  LD      drivers/input/built-in.o
+  CC      drivers/input/serio/serio.o
+  CC      net/bluetooth/bnep/sock.o
+  LD      fs/jbd2/jbd2.o
+  LD      fs/jbd2/built-in.o
+  LD      drivers/lguest/built-in.o
+  CC      net/bluetooth/hidp/sock.o
+  CC      net/core/gen_stats.o
+  CC      fs/lockd/host.o
+  LD      drivers/macintosh/built-in.o
+  LD      arch/arm/lib/built-in.o
+  AS      arch/arm/lib/ashldi3.o
+  CC      lib/bcd.o
+  AS      arch/arm/lib/ashrdi3.o
+  CC      drivers/input/serio/serport.o
+  AS      arch/arm/lib/backtrace.o
+  CC      net/bluetooth/bnep/netdev.o
+  CC      lib/div64.o
+  AS      arch/arm/lib/changebit.o
+  AS      arch/arm/lib/clear_user.o
+  AS      arch/arm/lib/clearbit.o
+  CC      net/core/gen_estimator.o
+  AS      arch/arm/lib/copy_from_user.o
+  LD      net/bluetooth/hidp/hidp.o
+  LD      net/bluetooth/hidp/built-in.o
+  CC      drivers/input/serio/libps2.o
+  CC      net/core/net_namespace.o
+  AS      arch/arm/lib/copy_page.o
+  CC      lib/sort.o
+  AS      arch/arm/lib/copy_to_user.o
+  AS      arch/arm/lib/csumipv6.o
+  AS      arch/arm/lib/csumpartial.o
+  LD      net/bluetooth/bnep/bnep.o
+  AS      arch/arm/lib/csumpartialcopy.o
+  CC      fs/lockd/svc.o
+  LD      net/bluetooth/bnep/built-in.o
+  CC      net/bluetooth/rfcomm/core.o
+  AS      arch/arm/lib/csumpartialcopyuser.o
+  CC      lib/parser.o
+  AS      arch/arm/lib/div64.o
+  AS      arch/arm/lib/findbit.o
+  CC      net/core/sysctl_net_core.o
+  AS      arch/arm/lib/getuser.o
+  CC      lib/halfmd4.o
+  CC      fs/nfs/client.o
+  LD      drivers/input/serio/built-in.o
+  AS      arch/arm/lib/io-readsb.o
+  CC      drivers/md/dm-uevent.o
+  AS      arch/arm/lib/io-readsl.o
+  AS      arch/arm/lib/io-readsw-armv4.o
+  CC      lib/debug_locks.o
+  AS      arch/arm/lib/io-writesb.o
+  AS      arch/arm/lib/io-writesl.o
+  CC      fs/lockd/svclock.o
+  AS      arch/arm/lib/io-writesw-armv4.o
+  CC      lib/random32.o
+  CC      net/core/dev.o
+  CC      drivers/md/dm.o
+  AS      arch/arm/lib/lib1funcs.o
+  AS      arch/arm/lib/lshrdi3.o
+  AS      arch/arm/lib/memchr.o
+  CC      lib/bust_spinlocks.o
+  AS      arch/arm/lib/memcpy.o
+  AS      arch/arm/lib/memmove.o
+  AS      arch/arm/lib/memset.o
+  AS      arch/arm/lib/memzero.o
+  AS      arch/arm/lib/muldi3.o
+  AS      arch/arm/lib/putuser.o
+  CC      lib/hexdump.o
+  AS      arch/arm/lib/setbit.o
+  AS      arch/arm/lib/sha1.o
+  AS      arch/arm/lib/strchr.o
+  CC      net/bluetooth/rfcomm/sock.o
+  AS      arch/arm/lib/strncpy_from_user.o
+  CC      fs/lockd/svcshare.o
+  AS      arch/arm/lib/strnlen_user.o
+  CC      fs/nfs/dir.o
+  AS      arch/arm/lib/strrchr.o
+  CC      lib/kasprintf.o
+  AS      arch/arm/lib/testchangebit.o
+  AS      arch/arm/lib/testclearbit.o
+  AS      arch/arm/lib/testsetbit.o
+  CC      lib/bitmap.o
+  AS      arch/arm/lib/ucmpdi2.o
+  AR      arch/arm/lib/lib.a
+  CC      lib/scatterlist.o
+  CC      drivers/md/dm-table.o
+  CC      fs/lockd/svcproc.o
+  CC      fs/lockd/svcsubs.o
+  CC      net/bluetooth/rfcomm/tty.o
+  CC      lib/string_helpers.o
+  CC      lib/gcd.o
+  CC      fs/nfs/file.o
+  CC      drivers/md/dm-target.o
+  CC      lib/lcm.o
+  CC      lib/list_sort.o
+  CC      fs/lockd/mon.o
+  CC      fs/nfs/getroot.o
+  CC      lib/uuid.o
+  CC      lib/flex_array.o
+  CC      drivers/md/dm-linear.o
+  LD      net/bluetooth/rfcomm/rfcomm.o
+  LD      net/bluetooth/rfcomm/built-in.o
+  CC      fs/nfs/inode.o
+  LD      net/bluetooth/bluetooth.o
+  CC      lib/kstrtox.o
+  LD      net/bluetooth/built-in.o
+  CC      drivers/md/dm-stripe.o
+  CC      lib/iomap_copy.o
+  CC      fs/lockd/xdr.o
+  CC      drivers/md/dm-ioctl.o
+  CC      net/ethernet/eth.o
+  CC      net/core/ethtool.o
+  CC      lib/devres.o
+  CC      drivers/md/dm-io.o
+  CC      lib/find_last_bit.o
+  CC      lib/hweight.o
+  CC      net/core/dev_addr_lists.o
+  CC      drivers/md/dm-kcopyd.o
+  LD      net/ethernet/built-in.o
+  CC      net/core/dst.o
+  CC      fs/lockd/grace.o
+  CC      lib/bitrev.o
+  CC      lib/crc-ccitt.o
+  CC      fs/nfs/super.o
+  LD      fs/lockd/lockd.o
+  LD      fs/lockd/built-in.o
+  CC      net/core/netevent.o
+  CC      lib/crc16.o
+  CC      drivers/md/dm-sysfs.o
+  HOSTCC  lib/gen_crc32table
+  CC      drivers/md/dm-crypt.o
+  CC      lib/libcrc32c.o
+  CC      net/ipv4/route.o
+  CC      net/ipv4/inetpeer.o
+  CC      net/core/neighbour.o
+  CC      lib/reed_solomon/reed_solomon.o
+  CC      net/ipv4/protocol.o
+  LD      lib/reed_solomon/built-in.o
+  CC      lib/zlib_deflate/deflate.o
+  CC      fs/nfs/nfs2xdr.o
+  LD      drivers/md/dm-mod.o
+  CC      lib/zlib_inflate/inffast.o
+  LD      drivers/md/built-in.o
+  LD      drivers/media/radio/built-in.o
+  CC      drivers/media/common/tuners/tuner-xc2028.o
+  CC      net/core/rtnetlink.o
+  CC      lib/zlib_inflate/inflate.o
+  CC      lib/zlib_deflate/deftree.o
+  CC      net/ipv4/ip_input.o
+  CC      fs/nfs/direct.o
+  CC      lib/zlib_inflate/infutil.o
+  CC      lib/zlib_inflate/inftrees.o
+  CC      net/ipv4/ip_fragment.o
+  CC      lib/zlib_deflate/deflate_syms.o
+  CC      drivers/media/common/tuners/tuner-simple.o
+  CC      lib/zlib_inflate/inflate_syms.o
+  LD      lib/zlib_deflate/zlib_deflate.o
+  LD      lib/zlib_deflate/built-in.o
+  CC      drivers/media/common/tuners/tuner-types.o
+  CC      net/core/utils.o
+  LD      lib/zlib_inflate/zlib_inflate.o
+  LD      lib/zlib_inflate/built-in.o
+  CC      lib/textsearch.o
+  CC      drivers/media/common/tuners/mt20xx.o
+  CC      net/ipv4/ip_forward.o
+  CC      fs/nfs/pagelist.o
+  CC      lib/ts_kmp.o
+  CC      fs/nfs/proc.o
+  CC      net/ipv6/af_inet6.o
+  CC      net/core/link_watch.o
+  CC      lib/ts_bm.o
+  CC      drivers/media/common/tuners/tda8290.o
+  CC      net/ipv4/ip_options.o
+  CC      lib/ts_fsm.o
+  CC      lib/percpu_counter.o
+  CC      net/core/filter.o
+  CC      drivers/media/common/tuners/tea5767.o
+  CC      fs/nfs/read.o
+  CC      lib/dynamic_debug.o
+  CC      lib/nlattr.o
+  CC      drivers/media/common/tuners/tea5761.o
+  CC      net/ipv6/anycast.o
+  CC      net/core/flow.o
+  CC      drivers/media/common/tuners/tda9887.o
+  CC      net/ipv4/ip_output.o
+  CC      net/ipv4/ip_sockglue.o
+  CC      lib/cpu_rmap.o
+  CC      fs/nfs/symlink.o
+  CC      net/core/net-sysfs.o
+  CC      net/ipv6/ip6_output.o
+  CC      lib/argv_split.o
+  CC      drivers/media/common/tuners/tda827x.o
+  CC      lib/cmdline.o
+  CC      lib/cpumask.o
+  CC      fs/nfs/unlink.o
+  CC      net/core/fib_rules.o
+  CC      drivers/media/common/tuners/tda18271-maps.o
+  CC      lib/ctype.o
+  CC      lib/dec_and_lock.o
+  CC      net/ipv4/inet_hashtables.o
+  CC      lib/decompress.o
+  CC      drivers/media/common/tuners/tda18271-common.o
+  CC      net/key/af_key.o
+  CC      lib/decompress_inflate.o
+  CC      lib/dump_stack.o
+  CC      fs/nfs/write.o
+  LD      net/core/built-in.o
+  CC      lib/extable.o
+  CC      drivers/media/common/tuners/tda18271-fe.o
+  CC      lib/idr.o
+  CC      net/ipv6/ip6_input.o
+  CC      lib/int_sqrt.o
+  CC      net/ipv4/inet_timewait_sock.o
+  CC      net/ipv6/addrconf.o
+  CC      lib/ioremap.o
+  CC      lib/irq_regs.o
+  CC      lib/is_single_threaded.o
+  CC      lib/klist.o
+  CC      fs/nfs/namespace.o
+  CC      drivers/media/common/tuners/xc5000.o
+  CC      drivers/media/common/tuners/mc44s803.o
+  CC      net/ipv4/inet_connection_sock.o
+  CC      lib/kobject.o
+  LD      net/key/built-in.o
+  CC      net/ipv4/tcp.o
+  CC      drivers/mfd/mfd-core.o
+  CC      fs/nfs/mount_clnt.o
+  LD      drivers/media/common/tuners/tda18271.o
+  LD      drivers/media/common/tuners/built-in.o
+  CC      lib/kobject_uevent.o
+  LD      drivers/media/common/built-in.o
+  LD      drivers/media/rc/keymaps/built-in.o
+  LD      drivers/media/rc/built-in.o
+  CC      drivers/media/video/v4l2-dev.o
+  CC      drivers/media/video/v4l2-ioctl.o
+  CC      drivers/mfd/tps6586x.o
+  CC      net/ipv6/addrlabel.o
+  CC      drivers/mfd/tps6591x.o
+  CC      fs/nfs/dns_resolve.o
+  CC      lib/kref.o
+  CC      lib/plist.o
+  CC      net/ipv6/route.o
+  CC      lib/prio_heap.o
+  CC      lib/prio_tree.o
+  CC      drivers/media/video/v4l2-device.o
+  CC      drivers/mfd/tps80031.o
+  CC      fs/nfs/cache_lib.o
+  CC      lib/proportions.o
+  CC      net/ipv4/tcp_input.o
+  CC      drivers/media/video/v4l2-fh.o
+  CC      fs/nfs/nfsroot.o
+  CC      fs/nfs/sysctl.o
+  CC      lib/radix-tree.o
+  CC      drivers/media/video/v4l2-event.o
+  CC      drivers/mfd/tps8003x-gpadc.o
+  CC      lib/ratelimit.o
+  CC      net/ipv6/ip6_fib.o
+  CC      lib/rbtree.o
+  CC      net/ipv6/ipv6_sockglue.o
+  LD      fs/nfs/nfs.o
+  CC      drivers/media/video/v4l2-ctrls.o
+  CC      drivers/mfd/max77663-core.o
+  LD      fs/nfs/built-in.o
+  LD      fs/nfs_common/built-in.o
+  CC      fs/nls/nls_base.o
+  CC      lib/reciprocal_div.o
+  CC      fs/nls/nls_cp437.o
+  CC      lib/rwsem-spinlock.o
+  CC      drivers/mfd/ricoh583.o
+  CC      fs/nls/nls_iso8859-1.o
+  CC      lib/sha1.o
+  CC      fs/nls/nls_utf8.o
+  CC      fs/notify/fsnotify.o
+  LD      fs/nls/built-in.o
+  CC      net/ipv6/ndisc.o
+  CC      net/ipv6/udp.o
+  CC      lib/show_mem.o
+  CC      drivers/media/video/v4l2-subdev.o
+  CC      fs/notify/notification.o
+  CC      lib/string.o
+  LD      drivers/mfd/built-in.o
+  CC      fs/notify/group.o
+  CC      lib/timerqueue.o
+  CC      drivers/media/video/v4l2-int-device.o
+  CC      fs/partitions/check.o
+  CC      fs/notify/inode_mark.o
+  CC      lib/vsprintf.o
+  CC      fs/notify/mark.o
+  CC      drivers/media/video/v4l2-common.o
+  CC      net/ipv4/tcp_output.o
+  CC      fs/notify/vfsmount_mark.o
+  CC      fs/partitions/msdos.o
+  LD      fs/notify/dnotify/built-in.o
+  LD      drivers/media/video/davinci/built-in.o
+  CC      net/ipv6/udplite.o
+  LD      fs/notify/fanotify/built-in.o
+  CC      drivers/media/video/tegra/avp/tegra_rpc.o
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      drivers/media/video/uvc/uvc_driver.o
+  GEN     lib/crc32table.h
+  AR      lib/lib.a
+  CC      lib/crc32.o
+  CC      fs/notify/inotify/inotify_user.o
+  CC      fs/partitions/efi.o
+  CC      drivers/media/video/tegra/avp/trpc_local.o
+  LD      lib/built-in.o
+  CC      net/ipv6/raw.o
+  CC      drivers/misc/ad525x_dpot.o
+  CC      drivers/media/video/tegra/avp/trpc_sema.o
+  CC      net/ipv4/tcp_timer.o
+  LD      fs/notify/inotify/built-in.o
+  LD      fs/notify/built-in.o
+  CC      drivers/media/video/uvc/uvc_queue.o
+  CC      drivers/media/video/uvc/uvc_v4l2.o
+  LD      fs/partitions/built-in.o
+  CC      fs/proc/mmu.o
+  LD      drivers/media/video/tegra/avp/built-in.o
+  CC      drivers/media/video/tegra/nvavp/nvavp_dev.o
+  CC      drivers/misc/ad525x_dpot-i2c.o
+  CC      fs/proc/task_mmu.o
+  CC      drivers/misc/apds9802als.o
+  CC      net/netfilter/core.o
+  CC      net/ipv4/tcp_ipv4.o
+  CC      net/ipv6/protocol.o
+  CC      drivers/misc/uid_stat.o
+  CC      drivers/media/video/uvc/uvc_video.o
+  LD      drivers/media/video/tegra/nvavp/built-in.o
+  CC      drivers/media/video/tegra/tegra_dtv.o
+  CC      fs/proc/inode.o
+  LD      drivers/misc/cb710/built-in.o
+  CC      net/ipv6/icmp.o
+  LD      drivers/misc/eeprom/built-in.o
+  CC      drivers/misc/inv_mpu/mpuirq.o
+  CC      net/netfilter/nf_log.o
+  CC      drivers/media/video/uvc/uvc_ctrl.o
+  CC      fs/proc/root.o
+  CC      drivers/misc/inv_mpu/slaveirq.o
+  CC      drivers/media/video/tegra/tegra_camera.o
+  CC      net/ipv6/mcast.o
+  CC      drivers/misc/inv_mpu/mpu-dev.o
+  CC      fs/proc/base.o
+  CC      net/netfilter/nf_queue.o
+  CC      drivers/media/video/tegra/fjm6mo.o
+drivers/misc/inv_mpu/mpu-dev.c: In function 'enable_load_accel_config':
+drivers/misc/inv_mpu/mpu-dev.c:102: warning: unused variable 'data'
+drivers/misc/inv_mpu/mpu-dev.c: In function 'enable_load_mag_config':
+drivers/misc/inv_mpu/mpu-dev.c:109: warning: unused variable 'data'
+drivers/misc/inv_mpu/mpu-dev.c: In function 'read_accel_raw':
+drivers/misc/inv_mpu/mpu-dev.c:147: warning: format '%02lx' expects type 'long unsigned int', but argument 2 has type 'int'
+drivers/misc/inv_mpu/mpu-dev.c:150: warning: format '%02lx' expects type 'long unsigned int', but argument 2 has type 'int'
+drivers/misc/inv_mpu/mpu-dev.c: At top level:
+drivers/misc/inv_mpu/mpu-dev.c:230: warning: initialization from incompatible pointer type
+drivers/misc/inv_mpu/mpu-dev.c:231: warning: initialization from incompatible pointer type
+drivers/misc/inv_mpu/mpu-dev.c: In function 'mpu_dev_open':
+drivers/misc/inv_mpu/mpu-dev.c:290: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/mpu-dev.c: In function 'mpu_dev_suspend':
+drivers/misc/inv_mpu/mpu-dev.c:985: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/mpu-dev.c: In function 'mpu_dev_resume':
+drivers/misc/inv_mpu/mpu-dev.c:1024: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/mpu-dev.c: In function 'mpu_probe':
+drivers/misc/inv_mpu/mpu-dev.c:1233: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/mpu-dev.c: At top level:
+drivers/misc/inv_mpu/mpu-dev.c:1405: warning: initialization from incompatible pointer type
+drivers/misc/inv_mpu/mpu-dev.c: In function 'mpu_init':
+drivers/misc/inv_mpu/mpu-dev.c:1427: warning: assignment from incompatible pointer type
+drivers/misc/inv_mpu/mpu-dev.c:1430: warning: no return statement in function returning non-void
+drivers/misc/inv_mpu/mpu-dev.c: In function 'mpu_delay_init':
+drivers/misc/inv_mpu/mpu-dev.c:1436: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/mpu-dev.c:1446: warning: ISO C90 forbids mixed declarations and code
+  CC      drivers/media/video/uvc/uvc_status.o
+  CC      net/ipv4/tcp_minisocks.o
+drivers/media/video/tegra/fjm6mo.c:98: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:99: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:337: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:383: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:393: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:404: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:520: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:560: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c: In function 'isp_calibration_golden_result':
+drivers/media/video/tegra/fjm6mo.c:562: warning: unused variable 'err'
+drivers/media/video/tegra/fjm6mo.c: In function 'isp_calibration_pgain_result':
+drivers/media/video/tegra/fjm6mo.c:622: warning: unused variable 'err'
+drivers/media/video/tegra/fjm6mo.c: In function 'fw_crc_checksum':
+drivers/media/video/tegra/fjm6mo.c:675: warning: passing argument 4 of 'fjm6mo_read_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:141: note: expected 'u32 *' but argument is of type 'u8 *'
+drivers/media/video/tegra/fjm6mo.c:669: warning: unused variable 'value'
+drivers/media/video/tegra/fjm6mo.c:669: warning: unused variable 'j'
+drivers/media/video/tegra/fjm6mo.c:669: warning: unused variable 'i'
+drivers/media/video/tegra/fjm6mo.c:668: warning: unused variable 'count'
+drivers/media/video/tegra/fjm6mo.c:697: warning: no return statement in function returning non-void
+drivers/media/video/tegra/fjm6mo.c: At top level:
+drivers/media/video/tegra/fjm6mo.c:700: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c: In function 'bin_checksum':
+drivers/media/video/tegra/fjm6mo.c:726: warning: unused variable 'err'
+drivers/media/video/tegra/fjm6mo.c:717: warning: unused variable 'ret_sum'
+drivers/media/video/tegra/fjm6mo.c:717: warning: unused variable 'i'
+drivers/media/video/tegra/fjm6mo.c:716: warning: unused variable 'count'
+drivers/media/video/tegra/fjm6mo.c: At top level:
+drivers/media/video/tegra/fjm6mo.c:772: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c: In function 'fw_compare':
+drivers/media/video/tegra/fjm6mo.c:801: warning: passing argument 4 of 'fjm6mo_read_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:141: note: expected 'u32 *' but argument is of type 'u8 *'
+drivers/media/video/tegra/fjm6mo.c:785: warning: unused variable 'err'
+drivers/media/video/tegra/fjm6mo.c:777: warning: unused variable 'result'
+drivers/media/video/tegra/fjm6mo.c:776: warning: unused variable 'i'
+drivers/media/video/tegra/fjm6mo.c:773: warning: unused variable 'status'
+drivers/media/video/tegra/fjm6mo.c: At top level:
+drivers/media/video/tegra/fjm6mo.c:828: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:887: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c: In function 'fw_version':
+drivers/media/video/tegra/fjm6mo.c:891: warning: passing argument 4 of 'fjm6mo_read_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:141: note: expected 'u32 *' but argument is of type 'u8 *'
+drivers/media/video/tegra/fjm6mo.c: At top level:
+drivers/media/video/tegra/fjm6mo.c:904: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:910: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c: In function 'fw_update':
+drivers/media/video/tegra/fjm6mo.c:922: warning: ISO C90 forbids mixed declarations and code
+drivers/media/video/tegra/fjm6mo.c:916: warning: unused variable 'times'
+drivers/media/video/tegra/fjm6mo.c: In function 'sensor_ioctl':
+drivers/media/video/tegra/fjm6mo.c:1497: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:1516: warning: unused variable 'val'
+drivers/media/video/tegra/fjm6mo.c:1693: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:1701: warning: ISO C90 forbids mixed declarations and code
+drivers/media/video/tegra/fjm6mo.c:1726: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:1781: warning: unused variable 'val'
+drivers/media/video/tegra/fjm6mo.c:1816: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:1831: warning: unused variable 'val'
+drivers/media/video/tegra/fjm6mo.c:1882: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:1897: warning: unused variable 'val'
+drivers/media/video/tegra/fjm6mo.c:1934: warning: unused variable 'val'
+drivers/media/video/tegra/fjm6mo.c:1962: warning: unused variable 'val'
+drivers/media/video/tegra/fjm6mo.c:2085: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:2041: warning: unused variable 'face_num'
+drivers/media/video/tegra/fjm6mo.c:2041: warning: unused variable 'face_h'
+drivers/media/video/tegra/fjm6mo.c:2041: warning: unused variable 'face_w'
+drivers/media/video/tegra/fjm6mo.c:2041: warning: unused variable 'face_y'
+drivers/media/video/tegra/fjm6mo.c:2041: warning: unused variable 'face_x'
+drivers/media/video/tegra/fjm6mo.c:2175: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:2196: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/fjm6mo.c:2258: warning: passing argument 2 of 'fjm6mo_write_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:102: note: expected 'u8 *' but argument is of type 'unsigned int *'
+drivers/media/video/tegra/fjm6mo.c:1392: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c:1497: warning: ignoring return value of 'copy_to_user', declared with attribute warn_unused_result
+drivers/media/video/tegra/fjm6mo.c: In function 'sensor_open':
+drivers/media/video/tegra/fjm6mo.c:2274: warning: unused variable 'err'
+drivers/media/video/tegra/fjm6mo.c:2274: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c:2273: warning: unused variable 'temp'
+drivers/media/video/tegra/fjm6mo.c:2273: warning: unused variable 'result'
+drivers/media/video/tegra/fjm6mo.c: In function 'sensor_probe':
+drivers/media/video/tegra/fjm6mo.c:2361: warning: passing argument 4 of 'fjm6mo_read_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:141: note: expected 'u32 *' but argument is of type 'u8 *'
+drivers/media/video/tegra/fjm6mo.c:2335: warning: unused variable 'temp'
+drivers/media/video/tegra/fjm6mo.c:2334: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c: In function 'sensor_init':
+drivers/media/video/tegra/fjm6mo.c:2440: warning: ISO C90 forbids mixed declarations and code
+drivers/media/video/tegra/fjm6mo.c: At top level:
+drivers/media/video/tegra/fjm6mo.c:2472: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c:2473: warning: function declaration isn't a prototype
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_camera':
+drivers/media/video/tegra/fjm6mo.c:2570: warning: passing argument 4 of 'fjm6mo_read_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:141: note: expected 'u32 *' but argument is of type 'u8 *'
+drivers/media/video/tegra/fjm6mo.c:2485: warning: unused variable 'ret'
+drivers/media/video/tegra/fjm6mo.c:2483: warning: unused variable 'len_read'
+drivers/media/video/tegra/fjm6mo.c:2483: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c:2482: warning: unused variable 'bp'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_calibration_shading':
+drivers/media/video/tegra/fjm6mo.c:2663: warning: unused variable 'temp'
+drivers/media/video/tegra/fjm6mo.c:2663: warning: unused variable 'result'
+drivers/media/video/tegra/fjm6mo.c:2662: warning: unused variable 'ret'
+drivers/media/video/tegra/fjm6mo.c:2660: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c:2659: warning: unused variable 'bp'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_calibration_pgain':
+drivers/media/video/tegra/fjm6mo.c:2733: warning: unused variable 'ret'
+drivers/media/video/tegra/fjm6mo.c:2731: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c:2730: warning: unused variable 'bp'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_set_cur_camera_id':
+drivers/media/video/tegra/fjm6mo.c:2767: warning: unused variable 'ret'
+drivers/media/video/tegra/fjm6mo.c:2766: warning: unused variable 'bp'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_camera_ack':
+drivers/media/video/tegra/fjm6mo.c:2842: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_vga_camera_ack':
+drivers/media/video/tegra/fjm6mo.c:2888: warning: unused variable 'retry'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_calibration_golden_value':
+drivers/media/video/tegra/fjm6mo.c:2990: warning: unused variable 'err'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_camera_read_memory':
+drivers/media/video/tegra/fjm6mo.c:3080: warning: unused variable 'ret'
+drivers/media/video/tegra/fjm6mo.c: In function 'i2c_camera_write_memory':
+drivers/media/video/tegra/fjm6mo.c:3126: warning: passing argument 2 of 'fjm6mo_write_memory' from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:102: note: expected 'u8 *' but argument is of type 'u32 *'
+drivers/media/video/tegra/fjm6mo.c:3109: warning: unused variable 'temp'
+drivers/media/video/tegra/fjm6mo.c: At top level:
+drivers/media/video/tegra/fjm6mo.c:3134: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3138: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3142: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3154: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3178: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3182: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3186: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/fjm6mo.c:3190: warning: initialization from incompatible pointer type
+  CC      drivers/media/video/uvc/uvc_isight.o
+drivers/media/video/tegra/fjm6mo.c: In function 'fjm6mo_read_register':
+drivers/media/video/tegra/fjm6mo.c:316: warning: 'ret' may be used uninitialized in this function
+  CC      net/netfilter/nf_sockopt.o
+  CC      drivers/misc/inv_mpu/mlsl-kernel.o
+  LD      drivers/media/video/uvc/uvcvideo.o
+  LD      drivers/media/video/uvc/built-in.o
+  CC      net/ipv4/tcp_cong.o
+  CC      fs/proc/generic.o
+  CC      drivers/misc/inv_mpu/mldl_cfg.o
+  CC      net/netfilter/nf_conntrack_core.o
+  CC      fs/proc/array.o
+  CC      net/ipv6/reassembly.o
+  CC      net/ipv4/datagram.o
+  CC      net/ipv6/tcp_ipv6.o
+drivers/media/video/tegra/fjm6mo.c: In function 'fw_compare':
+drivers/media/video/tegra/fjm6mo.c:825: warning: the frame size of 1032 bytes is larger than 1024 bytes; see http://go/big_stack_frame
+  CC      drivers/misc/inv_mpu/mldl_print_cfg.o
+  CC      drivers/misc/inv_mpu/timerirq.o
+  CC      drivers/media/video/tegra/iCatch7002a.o
+  CC      fs/proc/proc_tty.o
+  CC      net/ipv4/raw.o
+drivers/media/video/tegra/iCatch7002a.c: In function 'sensor_write_reg':
+drivers/media/video/tegra/iCatch7002a.c:277: warning: format '%x' expects type 'unsigned int', but argument 2 has type 'const char *'
+drivers/media/video/tegra/iCatch7002a.c:277: warning: too many arguments for format
+drivers/media/video/tegra/iCatch7002a.c: At top level:
+drivers/media/video/tegra/iCatch7002a.c:1008: warning: function declaration isn't a prototype
+drivers/media/video/tegra/iCatch7002a.c: In function 'sensor_set_mode':
+drivers/media/video/tegra/iCatch7002a.c:1523: warning: unused variable 'val'
+drivers/media/video/tegra/iCatch7002a.c:1522: warning: unused variable 'err'
+drivers/media/video/tegra/iCatch7002a.c: In function 'sensor_ioctl':
+drivers/media/video/tegra/iCatch7002a.c:1690: warning: unused variable 'val'
+drivers/media/video/tegra/iCatch7002a.c:1766: warning: unused variable 'val'
+drivers/media/video/tegra/iCatch7002a.c:1817: warning: unused variable 'i'
+drivers/media/video/tegra/iCatch7002a.c:1816: warning: unused variable 'FW_Status'
+drivers/media/video/tegra/iCatch7002a.c:1918: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/iCatch7002a.c:1928: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/iCatch7002a.c:2012: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/iCatch7002a.c:2030: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/iCatch7002a.c:2039: warning: ISO C90 forbids mixed declarations and code
+drivers/media/video/tegra/iCatch7002a.c:2061: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/iCatch7002a.c:2142: warning: unused variable 'val'
+drivers/media/video/tegra/iCatch7002a.c:2179: warning: unused variable 'val'
+drivers/media/video/tegra/iCatch7002a.c:1918: warning: ignoring return value of 'copy_to_user', declared with attribute warn_unused_result
+drivers/media/video/tegra/iCatch7002a.c:1928: warning: ignoring return value of 'copy_to_user', declared with attribute warn_unused_result
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_i7002a_fw_in_isp_read':
+drivers/media/video/tegra/iCatch7002a.c:2765: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_i7002a_page_dump_read':
+drivers/media/video/tegra/iCatch7002a.c:2809: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_fw_update_read':
+drivers/media/video/tegra/iCatch7002a.c:2859: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/media/video/tegra/iCatch7002a.c: In function 'i2c_get_write':
+drivers/media/video/tegra/iCatch7002a.c:3005: warning: passing argument 3 of 'sensor_read_reg' from incompatible pointer type
+drivers/media/video/tegra/iCatch7002a.c:219: note: expected 'u16 *' but argument is of type 'u32 *'
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_iCatch7002a_vga_status_read':
+drivers/media/video/tegra/iCatch7002a.c:3044: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_iCatch7002a_camera_status_read':
+drivers/media/video/tegra/iCatch7002a.c:3173: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/media/video/tegra/iCatch7002a.c: At top level:
+drivers/media/video/tegra/iCatch7002a.c:3326: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/iCatch7002a.c:3334: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/iCatch7002a.c:3342: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/iCatch7002a.c:3360: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/iCatch7002a.c:68: warning: 'g_i7002a_binfile_path' defined but not used
+drivers/media/video/tegra/iCatch7002a.c:99: warning: 'g_last_set_mode_jiffies' defined but not used
+drivers/media/video/tegra/iCatch7002a.c:156: warning: 'Autofocus_Trigger' defined but not used
+drivers/media/video/tegra/iCatch7002a.c: In function 'sensor_open':
+drivers/media/video/tegra/iCatch7002a.c:2467: warning: 'ret' may be used uninitialized in this function
+  CC      fs/proc/cmdline.o
+  CC      drivers/misc/inv_mpu/accel/kxtf9.o
+  CC      drivers/media/video/tegra/mi1040.o
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_iCatch7002a_vga_status_read':
+drivers/media/video/tegra/iCatch7002a.c:3153: warning: the frame size of 1032 bytes is larger than 1024 bytes; see http://go/big_stack_frame
+  CC      net/netfilter/nf_conntrack_standalone.o
+drivers/misc/inv_mpu/accel/kxtf9.c: In function 'kxtf9_init':
+drivers/misc/inv_mpu/accel/kxtf9.c:509: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/accel/kxtf9.c: In function 'kxtf9_mod_init':
+drivers/misc/inv_mpu/accel/kxtf9.c:906: warning: assignment from incompatible pointer type
+drivers/misc/inv_mpu/accel/kxtf9.c:909: warning: no return statement in function returning non-void
+drivers/misc/inv_mpu/accel/kxtf9.c: In function 'kxtf9_mod_delay_init':
+drivers/misc/inv_mpu/accel/kxtf9.c:915: warning: ISO C90 forbids mixed declarations and code
+  CC      fs/proc/consoles.o
+drivers/media/video/tegra/mi1040.c:38:1: warning: "SENSOR_BYTE_WRITE" redefined
+In file included from drivers/media/video/tegra/mi1040.c:29:
+include/media/yuv_sensor.h:22:1: warning: this is the location of the previous definition
+drivers/media/video/tegra/mi1040.c:39:1: warning: "SENSOR_WORD_WRITE" redefined
+include/media/yuv_sensor.h:23:1: warning: this is the location of the previous definition
+drivers/media/video/tegra/mi1040.c:40:1: warning: "SENSOR_MASK_BYTE_WRITE" redefined
+include/media/yuv_sensor.h:24:1: warning: this is the location of the previous definition
+drivers/media/video/tegra/mi1040.c:41:1: warning: "SENSOR_MASK_WORD_WRITE" redefined
+include/media/yuv_sensor.h:25:1: warning: this is the location of the previous definition
+drivers/media/video/tegra/mi1040.c: In function 'sensor_write_table_ex':
+drivers/media/video/tegra/mi1040.c:1062: warning: unused variable 'i'
+drivers/media/video/tegra/mi1040.c: In function 'dbg_mi1040_chip_id_read':
+drivers/media/video/tegra/mi1040.c:1112: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/media/video/tegra/mi1040.c: In function 'dbg_get_mi1040_reg_write':
+drivers/media/video/tegra/mi1040.c:1203: warning: passing argument 3 of 'sensor_read_reg' from incompatible pointer type
+drivers/media/video/tegra/mi1040.c:825: note: expected 'u16 *' but argument is of type 'unsigned int *'
+drivers/media/video/tegra/mi1040.c:1205: warning: passing argument 3 of 'sensor_read_reg_word' from incompatible pointer type
+drivers/media/video/tegra/mi1040.c:860: note: expected 'u16 *' but argument is of type 'unsigned int *'
+drivers/media/video/tegra/mi1040.c: At top level:
+drivers/media/video/tegra/mi1040.c:1232: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/mi1040.c:1335: warning: initialization from incompatible pointer type
+drivers/media/video/tegra/mi1040.c: In function 'sensor_ioctl':
+drivers/media/video/tegra/mi1040.c:1540: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/mi1040.c:1573: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/mi1040.c:1631: warning: passing argument 1 of 'copy_to_user' discards qualifiers from pointer target type
+/data/repos/kernels/tf700/arch/arm/include/asm/uaccess.h:413: note: expected 'void *' but argument is of type 'const void *'
+drivers/media/video/tegra/mi1040.c: At top level:
+drivers/media/video/tegra/mi1040.c:803: warning: 'Autofocus_Trigger' defined but not used
+drivers/media/video/tegra/mi1040.c:821: warning: 'mode_table' defined but not used
+drivers/media/video/tegra/mi1040.c:1033: warning: 'sensor_write_table' defined but not used
+drivers/media/video/tegra/mi1040.c:1339: warning: 'get_sensor_current_width' defined but not used
+drivers/media/video/tegra/iCatch7002a.c: In function 'dbg_i7002a_page_dump_read':
+drivers/media/video/tegra/iCatch7002a.c:2842: warning: the frame size of 1280 bytes is larger than 1024 bytes; see http://go/big_stack_frame
+drivers/media/video/tegra/mi1040.c: In function 'sensor_open':
+drivers/media/video/tegra/mi1040.c:1680: warning: 'ret' may be used uninitialized in this function
+drivers/media/video/tegra/mi1040.c: In function 'dbg_set_mi1040_reg_write':
+drivers/media/video/tegra/mi1040.c:1277: warning: 'ofst' may be used uninitialized in this function
+  LD      drivers/misc/inv_mpu/accel/inv_mpu_kxtf9.o
+  LD      drivers/misc/inv_mpu/accel/built-in.o
+  CC      drivers/misc/inv_mpu/compass/ami306.o
+  CC      fs/proc/cpuinfo.o
+  CC      net/ipv6/exthdrs.o
+  CC      fs/proc/devices.o
+  CC      fs/proc/interrupts.o
+  CC      net/ipv4/udp.o
+drivers/misc/inv_mpu/compass/ami306.c: In function 'ami306_suspend':
+drivers/misc/inv_mpu/compass/ami306.c:633: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/compass/ami306.c: In function 'ami306_resume':
+drivers/misc/inv_mpu/compass/ami306.c:659: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/compass/ami306.c: In function 'ami306_init':
+drivers/misc/inv_mpu/compass/ami306.c:760: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/compass/ami306.c: In function 'ami306_mod_init':
+drivers/misc/inv_mpu/compass/ami306.c:1093: warning: assignment from incompatible pointer type
+drivers/misc/inv_mpu/compass/ami306.c:1096: warning: no return statement in function returning non-void
+drivers/misc/inv_mpu/compass/ami306.c: In function 'ami306_mod_delay_init':
+drivers/misc/inv_mpu/compass/ami306.c:1102: warning: ISO C90 forbids mixed declarations and code
+drivers/misc/inv_mpu/compass/ami306.c: In function 'access_calibration_file':
+drivers/misc/inv_mpu/compass/ami306.c:147: warning: control reaches end of non-void function
+  CC      net/ipv4/udplite.o
+  CC      net/netfilter/nf_conntrack_expect.o
+  LD      drivers/media/video/tegra/built-in.o
+  CC      fs/proc/loadavg.o
+  LD      drivers/media/video/videodev.o
+  LD      drivers/media/video/built-in.o
+  LD      drivers/media/built-in.o
+  LD      drivers/misc/inv_mpu/compass/inv_mpu_ami306.o
+  LD      drivers/misc/inv_mpu/compass/built-in.o
+  CC      net/ipv4/arp.o
+  LD      drivers/misc/inv_mpu/pressure/built-in.o
+  LD      drivers/misc/inv_mpu/mpu3050.o
+  CC      net/ipv4/icmp.o
+  LD      drivers/misc/inv_mpu/built-in.o
+  CC      fs/proc/meminfo.o
+  CC      net/ipv6/datagram.o
+  LD      drivers/misc/lis3lv02d/built-in.o
+  CC      drivers/misc/tegra-baseband/bb-power.o
+  CC      fs/proc/stat.o
+  CC      net/netfilter/nf_conntrack_helper.o
+  CC      drivers/misc/tegra-baseband/bb-m7400.o
+  LD      drivers/misc/tegra-baseband/built-in.o
+  CC      fs/proc/uptime.o
+  LD      drivers/misc/ti-st/built-in.o
+  CC      fs/proc/version.o
+  CC      drivers/misc/nct1008.o
+  CC      net/netlink/af_netlink.o
+  CC      net/ipv4/devinet.o
+  CC      net/ipv6/ip6_flowlabel.o
+  CC      net/ipv4/af_inet.o
+  CC      fs/proc/softirqs.o
+  CC      net/netfilter/nf_conntrack_proto.o
+drivers/misc/nct1008.c: In function 'nct1008_get_temp':
+drivers/misc/nct1008.c:133: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
+drivers/misc/nct1008.c: In function 'nct1008_read_stress_test':
+drivers/misc/nct1008.c:430: warning: passing argument 2 of 'nct1008_get_temp' from incompatible pointer type
+drivers/misc/nct1008.c:99: note: expected 'long int *' but argument is of type 'u8 *'
+drivers/misc/nct1008.c: In function 'nct1008_power_control':
+drivers/misc/nct1008.c:711: warning: 'return' with a value, in function returning void
+drivers/misc/nct1008.c: In function 'nct1008_pm_notify':
+drivers/misc/nct1008.c:1132: warning: format '%x' expects type 'unsigned int', but argument 2 has type 'long unsigned int'
+  CC      fs/proc/proc_sysctl.o
+  CC      drivers/misc/bcm4329_rfkill.o
+  CC      net/netfilter/nf_conntrack_l3proto_generic.o
+drivers/misc/bcm4329_rfkill.c: In function 'bcm4329_rfkill_init':
+drivers/misc/bcm4329_rfkill.c:195: warning: ISO C90 forbids mixed declarations and code
+  CC      drivers/misc/tegra-cryptodev.o
+  CC      net/ipv6/inet6_connection_sock.o
+  CC      fs/proc/proc_net.o
+  CC      net/ipv4/igmp.o
+  CC      net/netfilter/nf_conntrack_proto_generic.o
+  CC      drivers/misc/max1749.o
+  CC      net/netlink/genetlink.o
+  CC      drivers/mmc/card/block.o
+  CC      fs/proc/kmsg.o
+  LD      drivers/misc/built-in.o
+  CC      drivers/mmc/card/queue.o
+  CC      net/ipv6/sysctl_net_ipv6.o
+  CC      net/netfilter/nf_conntrack_proto_tcp.o
+  CC      fs/proc/page.o
+drivers/mmc/card/block.c: In function 'mmc_blk_issue_rw_rq':
+drivers/mmc/card/block.c:380: warning: ISO C90 forbids mixed declarations and code
+  CC      net/ipv6/xfrm6_policy.o
+  CC      drivers/net/mii.o
+  LD      fs/proc/proc.o
+  LD      drivers/mmc/card/mmc_block.o
+  LD      drivers/mmc/card/built-in.o
+  LD      fs/proc/built-in.o
+  CC      drivers/mmc/core/core.o
+  LD      fs/quota/built-in.o
+  LD      net/netlink/built-in.o
+  CC      fs/ramfs/inode.o
+  CC      net/packet/af_packet.o
+  CC      net/netfilter/nf_conntrack_proto_udp.o
+  CC      net/ipv4/fib_frontend.o
+drivers/mmc/core/core.c: In function 'mmc_schedule_delayed_work':
+drivers/mmc/core/core.c:88: warning: format '%d' expects type 'int', but argument 5 has type 'long unsigned int'
+drivers/mmc/core/core.c: In function 'mmc_pm_notify':
+drivers/mmc/core/core.c:2128: warning: ISO C90 forbids mixed declarations and code
+drivers/mmc/core/core.c:2132: warning: format '%d' expects type 'int', but argument 5 has type 'long unsigned int'
+drivers/mmc/core/core.c:2158: warning: format '%d' expects type 'int', but argument 4 has type 'long unsigned int'
+  CC      fs/ramfs/file-mmu.o
+  CC      drivers/net/Space.o
+  CC      net/netfilter/nf_conntrack_extend.o
+  CC      net/ipv6/xfrm6_state.o
+  LD      fs/ramfs/ramfs.o
+  LD      fs/ramfs/built-in.o
+  CC      fs/sysfs/inode.o
+  CC      drivers/mmc/core/bus.o
+  CC      net/netfilter/nf_conntrack_acct.o
+  CC      drivers/net/loopback.o
+  CC      fs/sysfs/file.o
+  CC      drivers/mmc/core/host.o
+  CC      net/ipv4/fib_semantics.o
+  CC      net/ipv6/xfrm6_input.o
+  LD      net/packet/built-in.o
+  CC      net/rfkill/core.o
+  CC      net/netfilter/nf_conntrack_ecache.o
+  CC      drivers/net/ppp_generic.o
+  CC      fs/sysfs/dir.o
+  CC      drivers/mmc/core/mmc.o
+  CC      net/ipv6/xfrm6_output.o
+  CC      net/netfilter/nf_conntrack_h323_main.o
+  LD      net/rfkill/rfkill.o
+  LD      net/rfkill/built-in.o
+  CC      net/sched/sch_generic.o
+  CC      drivers/mmc/core/mmc_ops.o
+  CC      fs/sysfs/symlink.o
+  CC      net/ipv4/fib_trie.o
+  CC      net/ipv6/netfilter.o
+  CC      drivers/mmc/core/sd.o
+  CC      fs/sysfs/mount.o
+  CC      net/sched/sch_mq.o
+  CC      drivers/mmc/core/sd_ops.o
+  CC      drivers/net/ppp_async.o
+  CC      fs/sysfs/bin.o
+  CC      net/ipv6/fib6_rules.o
+  CC      net/netfilter/nf_conntrack_h323_asn1.o
+  CC      drivers/mmc/core/sdio.o
+  CC      fs/sysfs/group.o
+  CC      net/sched/sch_api.o
+  CC      net/ipv4/inet_fragment.o
+  CC      net/netfilter/nfnetlink.o
+  CC      drivers/net/ppp_synctty.o
+  LD      fs/sysfs/built-in.o
+  CC      fs/eventpoll.o
+  CC      net/ipv6/proc.o
+  CC      drivers/mmc/core/sdio_ops.o
+  CC      net/ipv4/sysctl_net_ipv4.o
+  CC      drivers/mmc/core/sdio_bus.o
+  CC      net/netfilter/nfnetlink_queue.o
+  CC      drivers/mmc/core/sdio_cis.o
+  CC      drivers/net/ppp_deflate.o
+  CC      fs/anon_inodes.o
+  CC      net/ipv6/ah6.o
+  CC      net/ipv4/sysfs_net_ipv4.o
+  CC      drivers/net/bsd_comp.o
+  CC      drivers/mmc/core/sdio_io.o
+  CC      fs/signalfd.o
+  CC      net/sched/sch_blackhole.o
+  CC      net/ipv6/esp6.o
+  CC      drivers/mmc/core/sdio_irq.o
+  CC      net/netfilter/nfnetlink_log.o
+  CC      drivers/net/ppp_mppe.o
+  CC      fs/timerfd.o
+  CC      net/sched/cls_api.o
+  CC      net/ipv4/proc.o
+  CC      drivers/mmc/core/quirks.o
+  CC      drivers/mmc/core/debugfs.o
+  CC      drivers/net/pppox.o
+  CC      fs/eventfd.o
+  CC      net/ipv6/ipcomp6.o
+  LD      net/netfilter/nf_conntrack.o
+  CC      net/netfilter/nf_conntrack_proto_dccp.o
+  LD      drivers/mmc/core/mmc_core.o
+  LD      drivers/mmc/core/built-in.o
+  CC      drivers/mmc/host/sdhci.o
+  CC      net/sched/act_api.o
+  CC      net/ipv4/esp4.o
+  CC      fs/aio.o
+  CC      drivers/net/pppoe.o
+  CC      net/ipv6/xfrm6_tunnel.o
+  CC      net/netfilter/nf_conntrack_proto_gre.o
+  CC      net/sched/act_police.o
+  CC      net/ipv6/tunnel6.o
+  CC      fs/locks.o
+  CC      net/ipv4/tunnel4.o
+  CC      drivers/net/pppolac.o
+  CC      net/netfilter/nf_conntrack_proto_sctp.o
+  CC      drivers/mmc/host/sdhci-pltfm.o
+drivers/mmc/host/sdhci-pltfm.c: In function 'sdhci_drv_init':
+drivers/mmc/host/sdhci-pltfm.c:255: warning: ISO C90 forbids mixed declarations and code
+  CC      net/sched/act_gact.o
+  CC      net/ipv6/xfrm6_mode_transport.o
+  CC      net/ipv4/xfrm4_mode_transport.o
+  CC      drivers/mmc/host/sdhci-tegra.o
+  CC      drivers/net/pppopns.o
+drivers/mmc/host/sdhci-tegra.c: In function 'tegra_sdhci_resume':
+drivers/mmc/host/sdhci-tegra.c:1138: warning: unused variable 'timeout'
+  CC      fs/binfmt_script.o
+  CC      net/netfilter/nf_conntrack_proto_udplite.o
+  CC      net/ipv6/xfrm6_mode_tunnel.o
+  CC      net/sched/act_mirred.o
+  CC      fs/binfmt_elf.o
+  CC      net/ipv4/xfrm4_mode_tunnel.o
+  CC      drivers/net/slip.o
+  LD      drivers/mmc/host/sdhci-platform.o
+  LD      drivers/mmc/host/built-in.o
+  LD      drivers/mmc/built-in.o
+  CC      net/netfilter/nf_conntrack_amanda.o
+  CC      net/netfilter/nf_conntrack_ftp.o
+  CC      net/sched/sch_fifo.o
+  CC      net/ipv6/xfrm6_mode_beet.o
+  CC      fs/mbcache.o
+  CC      net/ipv4/ipconfig.o
+  LD      net/netfilter/nf_conntrack_h323.o
+  CC      drivers/net/slhc.o
+  CC      net/sunrpc/clnt.o
+  CC      net/sched/sch_htb.o
+  CC      net/ipv6/mip6.o
+  CC      fs/posix_acl.o
+  CC      net/netfilter/nf_conntrack_irc.o
+  CC      fs/xattr_acl.o
+  CC      fs/dcookies.o
+  CC      net/netfilter/nf_conntrack_broadcast.o
+  CC      net/ipv4/netfilter.o
+  CC      drivers/net/dummy.o
+  CC      net/ipv6/netfilter/ip6_tables.o
+  CC      net/sunrpc/xprt.o
+  CC      net/sched/sch_ingress.o
+  LD      fs/built-in.o
+  CC      net/netfilter/nf_conntrack_netbios_ns.o
+  CC      drivers/net/tun.o
+  CC      net/ipv4/netfilter/nf_nat_rule.o
+  LD      drivers/net/arm/built-in.o
+  CC      net/sched/cls_u32.o
+  LD      drivers/net/caif/built-in.o
+  CC      drivers/net/usb/asix.o
+  CC      net/ipv4/netfilter/nf_nat_standalone.o
+  CC      net/netfilter/nf_conntrack_pptp.o
+  CC      net/sunrpc/socklib.o
+  CC      net/ipv6/netfilter/nf_defrag_ipv6_hooks.o
+  CC      net/ipv4/netfilter/nf_conntrack_l3proto_ipv4_compat.o
+  CC      net/sched/ematch.o
+  CC      net/sched/em_u32.o
+  CC      net/sunrpc/xprtsock.o
+  CC      net/netfilter/nf_conntrack_sane.o
+  CC      net/ipv6/netfilter/nf_conntrack_reasm.o
+  CC      drivers/net/usb/cdc_ether.o
+  LD      net/sched/built-in.o
+  CC      net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.o
+  CC      net/ipv4/tcp_cubic.o
+  CC      net/netfilter/nf_conntrack_sip.o
+  LD      net/ipv6/netfilter/nf_defrag_ipv6.o
+  LD      net/ipv6/netfilter/built-in.o
+  CC      net/ipv6/sit.o
+  CC      net/ipv4/xfrm4_policy.o
+  CC      drivers/net/usb/smsc95xx.o
+  CC      net/ipv4/netfilter/nf_conntrack_proto_icmp.o
+  CC      net/sunrpc/sched.o
+  LD      drivers/net/wireless/built-in.o
+  LD      drivers/net/wireless/bcm4329/built-in.o
+  CC [M]  drivers/net/wireless/bcm4329/dhd_linux.o
+  CC      net/ipv6/ip6_tunnel.o
+  CC      net/netfilter/nf_conntrack_tftp.o
+  CC      net/ipv4/netfilter/nf_nat_core.o
+  CC      net/netfilter/nf_tproxy_core.o
+  CC      drivers/net/usb/cdc_subset.o
+  CC      net/sunrpc/auth.o
+drivers/net/usb/cdc_subset.c:229:2: warning: #warning You need to configure some hardware for this driver
+  CC      net/sunrpc/auth_null.o
+  CC      drivers/net/usb/usbnet.o
+  CC      net/netfilter/x_tables.o
+  CC      net/ipv6/addrconf_core.o
+  CC      net/ipv4/netfilter/nf_nat_helper.o
+  CC [M]  drivers/net/wireless/bcm4329/linux_osl.o
+  CC      net/ipv6/exthdrs_core.o
+  CC      net/sunrpc/auth_unix.o
+  CC      net/netfilter/xt_tcpudp.o
+  CC      drivers/net/usb/cdc_ncm.o
+  CC [M]  drivers/net/wireless/bcm4329/bcmutils.o
+  CC      net/sunrpc/auth_generic.o
+  CC      net/ipv6/inet6_hashtables.o
+  CC [M]  drivers/net/wireless/bcm4329/dhd_common.o
+  CC      net/ipv4/netfilter/nf_nat_proto_unknown.o
+  CC      net/netfilter/xt_mark.o
+  CC      net/ipv4/netfilter/nf_nat_proto_common.o
+  CC      net/sunrpc/svc.o
+  LD      net/ipv6/ipv6.o
+  CC      net/netfilter/xt_connmark.o
+  CC      net/sunrpc/svcsock.o
+  CC [M]  drivers/net/usb/raw_ip_net.o
+  LD      net/ipv6/built-in.o
+  CC      net/ipv4/netfilter/nf_nat_proto_tcp.o
+  CC [M]  drivers/net/wireless/bcm4329/dhd_custom_gpio.o
+  CC      net/ipv4/xfrm4_state.o
+  CC      net/netfilter/xt_CLASSIFY.o
+  CC      net/ipv4/netfilter/nf_nat_proto_udp.o
+  CC [M]  drivers/net/wireless/bcm4329/wl_iw.o
+  CC      drivers/nfc/pn544.o
+  CC      net/sunrpc/svcauth.o
+  CC      net/netfilter/xt_NFQUEUE.o
+  LD      drivers/net/usb/built-in.o
+  CC [M]  drivers/net/wireless/bcm4329/siutils.o
+  CC      net/ipv4/netfilter/nf_nat_proto_icmp.o
+  CC      net/ipv4/netfilter/nf_defrag_ipv4.o
+  LD      drivers/nfc/built-in.o
+  CC      net/netfilter/xt_comment.o
+  CC      net/sunrpc/svcauth_unix.o
+  CC      net/netfilter/xt_connbytes.o
+  CC      net/ipv4/netfilter/nf_nat_amanda.o
+  CC      net/ipv4/netfilter/nf_nat_ftp.o
+  CC      net/netfilter/xt_connlimit.o
+  CC      net/ipv4/netfilter/nf_nat_h323.o
+  CC [M]  drivers/net/wireless/bcm4329/sbutils.o
+  CC      net/ipv4/netfilter/nf_nat_irc.o
+  CC      net/ipv4/netfilter/nf_nat_pptp.o
+  CC      net/sunrpc/addr.o
+  CC      net/netfilter/xt_conntrack.o
+  CC      net/ipv4/netfilter/nf_nat_sip.o
+  CC [M]  drivers/net/wireless/bcm4329/aiutils.o
+  CC      net/ipv4/netfilter/nf_nat_tftp.o
+  CC      net/netfilter/xt_hashlimit.o
+  CC      net/sunrpc/rpcb_clnt.o
+  CC      net/unix/af_unix.o
+  CC [M]  drivers/net/wireless/bcm4329/hndpmu.o
+  CC      net/ipv4/netfilter/nf_nat_proto_dccp.o
+  CC      net/ipv4/netfilter/nf_nat_proto_gre.o
+  CC      net/sunrpc/timer.o
+  CC      net/sunrpc/xdr.o
+  CC [M]  drivers/net/wireless/bcm4329/bcmwifi.o
+  CC      net/netfilter/xt_helper.o
+  CC      net/ipv4/xfrm4_input.o
+  CC      net/ipv4/netfilter/nf_nat_proto_udplite.o
+  CC      net/sunrpc/sunrpc_syms.o
+  CC      net/netfilter/xt_hl.o
+  CC [M]  drivers/net/wireless/bcm4329/dhd_sdio.o
+  CC      net/sunrpc/cache.o
+  CC      net/ipv4/netfilter/nf_nat_proto_sctp.o
+  CC      drivers/pci/access.o
+  CC      net/unix/garbage.o
+  LD      drivers/platform/built-in.o
+  CC      net/netfilter/xt_iprange.o
+  CC      drivers/power/power_supply_core.o
+  CC      drivers/pci/bus.o
+  CC      drivers/power/power_supply_sysfs.o
+  CC      net/ipv4/netfilter/ip_tables.o
+  CC      drivers/power/pad_battery.o
+  CC      net/netfilter/xt_length.o
+  CC      net/unix/sysctl_net_unix.o
+  CC      drivers/pci/probe.o
+  CC      net/sunrpc/rpc_pipe.o
+drivers/power/pad_battery.c: In function 'pad_get_psp':
+drivers/power/pad_battery.c:585: warning: ISO C90 forbids mixed declarations and code
+In file included from drivers/power/pad_battery.c:727:
+drivers/power/stress_test.c: In function 'battery_ioctl':
+drivers/power/stress_test.c:39: warning: unused variable 'battery_status'
+drivers/power/stress_test.c:38: warning: unused variable 'fc'
+drivers/power/pad_battery.c: At top level:
+drivers/power/pad_battery.c:298: warning: 'device_count' defined but not used
+  LD      net/unix/unix.o
+  LD      net/unix/built-in.o
+  CC      net/sunrpc/svc_xprt.o
+  CC      net/netfilter/xt_limit.o
+  LD      drivers/power/power_supply.o
+  LD      drivers/power/built-in.o
+  CC      net/ipv4/netfilter/iptable_filter.o
+  CC [M]  drivers/net/wireless/bcm4329/dhd_linux_sched.o
+  CC      drivers/pci/remove.o
+  CC      net/netfilter/xt_mac.o
+  CC      net/sunrpc/stats.o
+  LD      drivers/net/wireless/bcmdhd/built-in.o
+  CC [M]  drivers/net/wireless/bcmdhd/aiutils.o
+  CC [M]  drivers/net/wireless/bcm4329/dhd_cdc.o
+  CC      drivers/pci/pci.o
+  CC      net/ipv4/netfilter/iptable_mangle.o
+  CC      net/netfilter/xt_pkttype.o
+  CC      net/sunrpc/sysctl.o
+  CC      net/wireless/wext-core.o
+  CC [M]  drivers/net/wireless/bcm4329/bcmsdh_sdmmc.o
+  CC [M]  drivers/net/wireless/bcmdhd/bcmsdh_sdmmc_linux.o
+  LD      net/ipv4/netfilter/iptable_nat.o
+  CC      net/netfilter/xt_policy.o
+  CC      net/ipv4/netfilter/ipt_ah.o
+  LD      net/sunrpc/sunrpc.o
+  CC      drivers/pci/pci-driver.o
+  LD      net/sunrpc/built-in.o
+  CC [M]  drivers/net/wireless/bcm4329/bcmsdh.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_linux.o
+  CC      net/wireless/wext-proc.o
+  CC      net/ipv4/netfilter/ipt_ecn.o
+  CC      net/netfilter/xt_qtaguid_print.o
+  CC      drivers/pci/search.o
+  CC      net/ipv4/netfilter/ipt_LOG.o
+  CC      net/wireless/wext-priv.o
+  CC [M]  drivers/net/wireless/bcm4329/bcmsdh_linux.o
+  CC      net/netfilter/xt_qtaguid.o
+  CC      drivers/pci/pci-sysfs.o
+  CC      drivers/regulator/core.o
+In file included from net/ipv4/netfilter/ipt_LOG.c:27:
+include/net/netfilter/xt_log.h: In function 'sb_close':
+include/net/netfilter/xt_log.h:50: warning: value computed is not used
+  CC [M]  drivers/net/wireless/bcm4329/bcmsdh_sdmmc_linux.o
+  CC [M]  net/wireless/core.o
+  CC      net/ipv4/netfilter/ipt_MASQUERADE.o
+  CC      drivers/pci/rom.o
+  LD [M]  drivers/net/wireless/bcm4329/bcm4329.o
+  CC      drivers/ril/ril.o
+  CC      drivers/pci/setup-res.o
+  CC [M]  net/wireless/sysfs.o
+  CC [M]  drivers/net/wireless/bcmdhd/siutils.o
+  CC      drivers/regulator/dummy.o
+  CC      net/ipv4/netfilter/ipt_NETMAP.o
+  CC      drivers/ril/ril_sim.o
+  CC [M]  net/wireless/radiotap.o
+  CC      drivers/pci/irq.o
+  CC      drivers/regulator/fixed.o
+drivers/ril/ril_sim.c:64: warning: function declaration isn't a prototype
+drivers/ril/ril_sim.c: In function 'hotplug_work_handle':
+drivers/ril/ril_sim.c:89: warning: ISO C90 forbids mixed declarations and code
+drivers/ril/ril_sim.c: In function 'init_sim_hot_plug':
+drivers/ril/ril_sim.c:204: warning: assignment from incompatible pointer type
+drivers/ril/ril_sim.c:207: warning: assignment from incompatible pointer type
+drivers/ril/ril_sim.c:208: warning: assignment from incompatible pointer type
+drivers/ril/ril_sim.c:212: warning: assignment from incompatible pointer type
+drivers/ril/ril_sim.c:213: warning: assignment from incompatible pointer type
+drivers/ril/ril_sim.c: In function 'free_sim_hot_plug':
+drivers/ril/ril_sim.c:264: warning: ISO C90 forbids mixed declarations and code
+  CC      net/ipv4/netfilter/ipt_REDIRECT.o
+  LD      drivers/ril/built-in.o
+  CC      drivers/regulator/virtual.o
+  CC      drivers/pci/vpd.o
+  CC      net/netfilter/xt_quota.o
+  CC      drivers/rtc/rtc-lib.o
+  CC [M]  net/wireless/util.o
+  CC      net/netfilter/xt_socket.o
+  CC      drivers/pci/proc.o
+  CC [M]  drivers/net/wireless/bcmdhd/bcmutils.o
+  CC      drivers/regulator/gpio-regulator.o
+  CC      drivers/rtc/hctosys.o
+  CC      net/ipv4/netfilter/ipt_REJECT.o
+  CC      drivers/pci/slot.o
+  CC      drivers/rtc/class.o
+  CC      drivers/regulator/max77663-regulator.o
+  CC      net/netfilter/xt_state.o
+  CC      drivers/pci/quirks.o
+  CC      drivers/rtc/interface.o
+  CC [M]  net/wireless/reg.o
+  CC      net/ipv4/netfilter/arp_tables.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_linux_sched.o
+  CC      net/netfilter/xt_statistic.o
+  CC      drivers/regulator/tps6586x-regulator.o
+  CC [M]  drivers/net/wireless/bcmdhd/bcmwifi.o
+  CC      drivers/rtc/rtc-dev.o
+  CC      net/netfilter/xt_string.o
+  CC [M]  net/wireless/scan.o
+  CC      drivers/pci/hotplug.o
+  CC      drivers/regulator/tps6591x-regulator.o
+  CC      net/ipv4/netfilter/arpt_mangle.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_sdio.o
+  CC      drivers/rtc/rtc-proc.o
+  CC      drivers/pci/setup-bus.o
+  CC      net/netfilter/xt_time.o
+  CC      drivers/regulator/tps6236x-regulator.o
+  CC      drivers/rtc/rtc-sysfs.o
+  CC      net/ipv4/netfilter/arptable_filter.o
+  CC      net/netfilter/xt_u32.o
+  CC      drivers/rtc/alarm.o
+  CC [M]  net/wireless/nl80211.o
+  CC      drivers/pci/setup-irq.o
+  CC      drivers/regulator/tps80031-regulator.o
+  LD      net/ipv4/netfilter/nf_conntrack_ipv4.o
+  LD      net/ipv4/netfilter/nf_nat.o
+  CC      drivers/pci/syscall.o
+  LD      net/ipv4/netfilter/built-in.o
+  CC      drivers/rtc/alarm-dev.o
+  CC      net/ipv4/xfrm4_output.o
+  LD      net/netfilter/netfilter.o
+  LD      net/netfilter/built-in.o
+  LD      drivers/pci/built-in.o
+  CC      net/xfrm/xfrm_policy.o
+  CC      drivers/regulator/ricoh583-regulator.o
+  CC      drivers/rtc/rtc-max77663.o
+  CC      drivers/rtc/rtc-tps6586x.o
+  LD      net/ipv4/built-in.o
+  CC [M]  net/wireless/mlme.o
+  CC      drivers/rtc/rtc-tps6591x.o
+  CC      drivers/regulator/gpio-switch-regulator.o
+  CC      net/sysctl_net.o
+drivers/rtc/rtc-tps6591x.c: In function 'tps6591x_rtc_valid_tm':
+drivers/rtc/rtc-tps6591x.c:121: warning: too many arguments for format
+  CC [M]  drivers/net/wireless/bcmdhd/bcmevent.o
+  CC      drivers/rtc/rtc-tps80031.o
+  CC      net/activity_stats.o
+  LD      drivers/regulator/built-in.o
+  CC      drivers/scsi/scsi.o
+  CC [M]  net/wireless/ibss.o
+  CC      net/xfrm/xfrm_state.o
+  CC      drivers/rtc/rtc-ricoh583.o
+  LD      drivers/rtc/rtc-core.o
+  CC      net/xfrm/xfrm_hash.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_bta.o
+  CC      net/xfrm/xfrm_input.o
+  LD      drivers/rtc/built-in.o
+  CC      drivers/staging/staging.o
+  CC [M]  net/wireless/sme.o
+  CC      drivers/scsi/hosts.o
+  CC      drivers/staging/android/binder.o
+  CC [M]  drivers/net/wireless/bcmdhd/hndpmu.o
+  CC [M]  drivers/net/wireless/bcmdhd/bcmsdh.o
+  CC      net/xfrm/xfrm_output.o
+  CC      drivers/scsi/scsi_ioctl.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_cdc.o
+  CC [M]  net/wireless/chan.o
+  CC [M]  net/wireless/ethtool.o
+  CC      drivers/staging/android/logger.o
+  CC      drivers/scsi/constants.o
+  CC      net/xfrm/xfrm_algo.o
+  CC [M]  net/wireless/mesh.o
+  CC [M]  drivers/net/wireless/bcmdhd/bcmsdh_linux.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_common.o
+  LD      drivers/staging/generic_serial/built-in.o
+  CC      drivers/staging/iio/industrialio-core.o
+  CC      drivers/scsi/scsicam.o
+  CC [M]  net/wireless/wext-compat.o
+  CC      net/xfrm/xfrm_sysctl.o
+  CC      drivers/scsi/scsi_error.o
+  LD      drivers/staging/iio/accel/built-in.o
+  LD      drivers/staging/iio/adc/built-in.o
+  LD      drivers/staging/iio/addac/built-in.o
+  LD      drivers/staging/iio/dac/built-in.o
+  CC      drivers/staging/android/ram_console.o
+  LD      drivers/staging/iio/dds/built-in.o
+  LD      drivers/staging/iio/gyro/built-in.o
+  LD      drivers/staging/iio/imu/built-in.o
+  CC      drivers/staging/iio/light/isl29028.o
+  CC      net/xfrm/xfrm_replay.o
+  LD      drivers/staging/iio/magnetometer/built-in.o
+  LD      drivers/staging/iio/meter/built-in.o
+  CC      drivers/scsi/scsi_lib.o
+  CC      drivers/staging/android/timed_output.o
+  CC [M]  drivers/net/wireless/bcmdhd/linux_osl.o
+  CC [M]  net/wireless/wext-sme.o
+  CC      drivers/staging/android/timed_gpio.o
+  LD      drivers/staging/iio/light/built-in.o
+  LD      drivers/staging/iio/resolver/built-in.o
+  LD      drivers/staging/iio/trigger/built-in.o
+  CC      drivers/scsi/scsi_lib_dma.o
+  LD      drivers/staging/iio/industrialio.o
+  CC      net/xfrm/xfrm_ipcomp.o
+  LD      drivers/staging/iio/built-in.o
+  CC [M]  drivers/net/wireless/bcmdhd/bcmsdh_sdmmc.o
+  CC      drivers/staging/android/lowmemorykiller.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_custom_gpio.o
+  LD      net/wireless/built-in.o
+  LD [M]  net/wireless/cfg80211.o
+  CC      drivers/scsi/scsi_scan.o
+  CC [M]  drivers/net/wireless/bcmdhd/sbutils.o
+  LD      drivers/staging/android/built-in.o
+  CC      drivers/switch/switch_class.o
+  LD      drivers/staging/tty/built-in.o
+  CC      drivers/scsi/scsi_sysfs.o
+  LD      drivers/staging/built-in.o
+  CC      drivers/tty/tty_io.o
+  LD      net/xfrm/built-in.o
+  LD      net/built-in.o
+  LD      drivers/switch/built-in.o
+  CC      drivers/usb/class/cdc-acm.o
+  CC      drivers/usb/core/usb.o
+  CC      drivers/usb/host/pci-quirks.o
+  CC [M]  drivers/net/wireless/bcmdhd/wldev_common.o
+drivers/usb/class/cdc-acm.c: In function 'acm_resume':
+drivers/usb/class/cdc-acm.c:1576: warning: unused variable 'wb'
+  CC      drivers/usb/core/hub.o
+  CC      drivers/scsi/scsi_devinfo.o
+  CC      drivers/scsi/scsi_sysctl.o
+  CC      drivers/usb/host/ehci-hcd.o
+  CC [M]  drivers/net/wireless/bcmdhd/wl_android.o
+  CC      drivers/scsi/scsi_proc.o
+  CC      drivers/tty/n_tty.o
+  CC      drivers/usb/class/cdc-wdm.o
+/ehci-hcd.c:1279:
+drivers/usb/host/ehci-tegra.c: In function 'usb3_ehci_dock_in_work_handler':
+drivers/usb/host/ehci-tegra.c:97: warning: unused variable 'ehci'
+drivers/usb/host/ehci-tegra.c: In function 'gpio_dock_in_irq_init':
+drivers/usb/host/ehci-tegra.c:139: warning: passing argument 2 of 'request_irq' from incompatible pointer type
+include/linux/interrupt.h:129: note: expected 'irq_handler_t' but argument is of type 'enum irqreturn_t (*)(struct usb_hcd *)'
+In file included from drivers/usb/host/ehci-hcd.c:1279:
+drivers/usb/host/ehci-tegra.c: In function 'tegra_usb_resume':
+drivers/usb/host/ehci-tegra.c:566: warning: unused variable 'udev'
+  CC      drivers/usb/core/hcd.o
+  CC      drivers/scsi/scsi_trace.o
+  CC      drivers/scsi/scsi_pm.o
+  CC [M]  drivers/net/wireless/bcmdhd/wl_cfg80211.o
+  CC      drivers/tty/tty_ioctl.o
+  LD      drivers/usb/class/built-in.o
+  CC      drivers/tty/tty_ldisc.o
+  CC      drivers/scsi/sd.o
+  CC      drivers/usb/core/urb.o
+  CC      drivers/usb/core/message.o
+  CC      drivers/tty/tty_buffer.o
+  CC      drivers/tty/tty_port.o
+  CC      drivers/usb/core/driver.o
+  CC      drivers/tty/tty_mutex.o
+  CC      drivers/tty/pty.o
+  CC      drivers/scsi/sr.o
+  CC      drivers/tty/sysrq.o
+  LD      drivers/tty/ipwireless/built-in.o
+  CC      drivers/tty/serial/serial_core.o
+  CC      drivers/usb/core/config.o
+  CC      drivers/scsi/sr_vendor.o
+  LD      drivers/usb/host/built-in.o
+  LD      drivers/tty/vt/built-in.o
+  LD      drivers/usb/misc/built-in.o
+  CC      drivers/usb/core/file.o
+  CC      drivers/usb/serial/usb-serial.o
+  LD      drivers/scsi/arm/built-in.o
+  CC      drivers/scsi/sg.o
+  CC [M]  drivers/scsi/scsi_wait_scan.o
+  CC      drivers/usb/core/buffer.o
+  CC      drivers/usb/core/sysfs.o
+  CC      drivers/usb/serial/generic.o
+  CC      drivers/usb/core/endpoint.o
+  CC      drivers/tty/serial/8250.o
+  CC      drivers/usb/serial/bus.o
+  CC      drivers/usb/core/devio.o
+  CC      drivers/usb/core/notify.o
+  CC      drivers/usb/serial/option.o
+  CC      drivers/usb/serial/pl2303.o
+  LD      drivers/scsi/scsi_mod.o
+  LD      drivers/scsi/sd_mod.o
+  LD      drivers/scsi/sr_mod.o
+  CC      drivers/usb/core/generic.o
+  LD      drivers/scsi/built-in.o
+  CC      drivers/tty/serial/8250_pci.o
+  CC      drivers/usb/storage/libusual.o
+  CC [M]  drivers/net/wireless/bcmdhd/dhd_cfg80211.o
+  CC      drivers/tty/serial/8250_early.o
+  CC      drivers/usb/core/quirks.o
+  CC      drivers/usb/serial/qcserial.o
+  CC      drivers/usb/storage/usual-tables.o
+  CC      drivers/usb/serial/usb_wwan.o
+  CC      drivers/usb/core/devices.o
+  CC [M]  drivers/usb/serial/baseband_usb_chr.o
+  CC      drivers/usb/storage/scsiglue.o
+  LD      drivers/usb/serial/usbserial.o
+  CC      drivers/tty/serial/tegra_hsuart.o
+  CC [M]  drivers/net/wireless/bcmdhd/wl_cfgp2p.o
+  CC      drivers/usb/core/hcd-pci.o
+drivers/tty/serial/tegra_hsuart.c: In function 'tegra_uart_hw_deinit':
+drivers/tty/serial/tegra_hsuart.c:656: warning: comparison of distinct pointer types lacks a cast
+drivers/tty/serial/tegra_hsuart.c:634: warning: unused variable 'retry'
+drivers/tty/serial/tegra_hsuart.c: In function 'tegra_uart_init_rx_dma':
+drivers/tty/serial/tegra_hsuart.c:836: warning: unused variable 'rx_dma_phys'
+  LD      drivers/usb/serial/built-in.o
+  CC      drivers/usb/core/inode.o
+  CC [M]  drivers/net/wireless/bcmdhd/wl_linux_mon.o
+  CC      drivers/usb/storage/protocol.o
+  LD      drivers/tty/serial/built-in.o
+  LD      drivers/tty/built-in.o
+  CC      drivers/usb/storage/transport.o
+  CC      drivers/usb/gadget/fsl_udc_core.o
+  LD      drivers/usb/core/usbcore.o
+  CC      drivers/usb/storage/usb.o
+  LD      drivers/usb/core/built-in.o
+drivers/usb/gadget/fsl_udc_core.c: In function 'udc_init':
+drivers/usb/gadget/fsl_udc_core.c:3369: warning: unused variable 'ret'
+  CC      drivers/usb/otg/otg.o
+  CC      drivers/usb/storage/initializers.o
+  CC      drivers/usb/otg/tegra-otg.o
+  CC      drivers/usb/otg/ulpi.o
+drivers/usb/otg/tegra-otg.c: In function 'tegra_otg_irq':
+drivers/usb/otg/tegra-otg.c:247: warning: format '%#X' expects type 'unsigned int', but argument 3 has type 'long unsigned int'
+  LD [M]  drivers/net/wireless/bcmdhd/bcmdhd.o
+  CC      drivers/usb/storage/sierra_ms.o
+  LD      drivers/net/built-in.o
+  CC      drivers/usb/otg/ulpi_viewport.o
+  CC      drivers/usb/storage/option_ms.o
+  CC      drivers/usb/gadget/fsl_tegra_udc.o
+  CC      drivers/video/fb_notify.o
+  CC      drivers/video/fbmem.o
+  LD      drivers/usb/otg/built-in.o
+  CC      drivers/usb/gadget/android.o
+  CC      drivers/video/fbmon.o
+  CC      drivers/video/fbcmap.o
+  CC      drivers/video/fbsysfs.o
+  LD      drivers/usb/storage/usb-storage.o
+  LD      drivers/usb/storage/usb-libusual.o
+  LD      drivers/usb/storage/built-in.o
+  LD      drivers/usb/built-in.o
+  CC      drivers/video/modedb.o
+  CC      drivers/video/fbcvt.o
+  CC      drivers/video/backlight/lcd.o
+  CC      drivers/video/backlight/backlight.o
+  LD      drivers/video/display/built-in.o
+  LD      drivers/video/omap2/displays/built-in.o
+  LD      drivers/video/omap2/dss/built-in.o
+drivers/usb/gadget/android.c:721: warning: 'mass_storage_function' defined but not used
+  LD      drivers/video/omap2/omapfb/built-in.o
+  LD      drivers/video/omap2/built-in.o
+  CC      drivers/video/tegra/dc/dc.o
+  CC      drivers/video/backlight/pwm_bl.o
+  CC      drivers/video/cfbfillrect.o
+  CC      drivers/video/backlight/tegra_pwm_bl.o
+  CC      drivers/video/cfbcopyarea.o
+drivers/video/backlight/pwm_bl.c:41: warning: useless storage class specifier in empty declaration
+drivers/video/backlight/pwm_bl.c: In function 'display_write_table':
+drivers/video/backlight/pwm_bl.c:101: warning: unused variable 'command_count'
+drivers/video/backlight/pwm_bl.c: In function 'display_read_table':
+drivers/video/backlight/pwm_bl.c:174: warning: passing argument 3 of 'display_read_reg' makes pointer from integer without a cast
+drivers/video/backlight/pwm_bl.c:119: note: expected 'u16 *' but argument is of type 'u16'
+drivers/video/backlight/pwm_bl.c:163: warning: unused variable 'command_count'
+drivers/video/backlight/pwm_bl.c: In function 'pwm_backlight_update_status':
+drivers/video/backlight/pwm_bl.c:209: warning: ISO C90 forbids mixed declarations and code
+drivers/video/backlight/pwm_bl.c:214: warning: unused variable 'ret'
+drivers/video/backlight/pwm_bl.c: At top level:
+drivers/video/backlight/pwm_bl.c:157: warning: 'display_read_table' defined but not used
+drivers/video/tegra/dc/dc.c: In function 'dbg_hdmi_reg_rw_read':
+drivers/video/tegra/dc/dc.c:536: warning: format '%d' expects type 'int', but argument 6 has type 'loff_t'
+drivers/video/tegra/dc/dc.c: At top level:
+drivers/video/tegra/dc/dc.c:630: warning: initialization from incompatible pointer type
+drivers/video/tegra/dc/dc.c: In function 'tegra_dc_shutdown':
+drivers/video/tegra/dc/dc.c:3126: warning: ISO C90 forbids mixed declarations and code
+drivers/video/tegra/dc/dc.c: In function 'tegra_dc_module_init':
+drivers/video/tegra/dc/dc.c:3247: warning: ISO C90 forbids mixed declarations and code
+  CC      drivers/video/tegra/dc/rgb.o
+  CC      drivers/video/tegra/dc/hdmi.o
+  CC      drivers/video/cfbimgblt.o
+  CC      drivers/video/output.o
+  LD      drivers/video/backlight/built-in.o
+  LD      drivers/video/fb.o
+drivers/video/tegra/dc/hdmi.c: In function 'tegra_dc_hdmi_init':
+drivers/video/tegra/dc/hdmi.c:1071: warning: ignoring return value of 'device_create_file', declared with attribute warn_unused_result
+  CC      drivers/video/tegra/host/gr3d/gr3d.o
+  CC      drivers/video/tegra/dc/nvhdcp.o
+  CC      drivers/video/tegra/dc/edid.o
+  CC      drivers/video/tegra/dc/nvsd.o
+  CC      drivers/video/tegra/host/gr3d/gr3d_t20.o
+drivers/video/tegra/dc/nvsd.c: In function 'nvsd_phase_in_adjustments':
+drivers/video/tegra/dc/nvsd.c:159: warning: suggest parentheses around comparison in operand of '&'
+drivers/video/tegra/dc/nvsd.c:166: warning: suggest explicit braces to avoid ambiguous 'else'
+  CC      drivers/video/tegra/dc/dsi.o
+  CC      drivers/video/tegra/dc/dc_sysfs.o
+  CC      drivers/video/tegra/host/gr3d/gr3d_t30.o
+  CC      drivers/video/tegra/host/host1x/host1x_syncpt.o
+  CC      drivers/video/tegra/dc/ext/dev.o
+  CC      drivers/video/tegra/host/host1x/host1x_channel.o
+  CC      drivers/video/tegra/host/gr3d/scale3d.o
+  CC      drivers/video/tegra/dc/ext/util.o
+  CC      drivers/video/tegra/host/host1x/host1x_intr.o
+  CC      drivers/video/tegra/host/host1x/host1x_cdma.o
+  CC      drivers/video/tegra/host/host1x/host1x_debug.o
+  CC      drivers/video/tegra/dc/ext/cursor.o
+  LD      drivers/video/tegra/host/gr3d/nvhost-gr3d.o
+  LD      drivers/video/tegra/host/gr3d/built-in.o
+  CC      drivers/video/tegra/host/mpe/mpe.o
+  CC      drivers/video/tegra/dc/ext/events.o
+  CC      drivers/video/tegra/dc/ext/control.o
+  CC      drivers/video/tegra/nvmap/nvmap.o
+  LD      drivers/video/tegra/host/host1x/nvhost-host1x.o
+  LD      drivers/video/tegra/host/host1x/built-in.o
+  CC      drivers/video/tegra/host/t20/t20.o
+  CC      drivers/video/tegra/host/t30/t30.o
+  LD      drivers/video/tegra/host/mpe/nvhost-mpe.o
+  LD      drivers/video/tegra/host/mpe/built-in.o
+  CC      drivers/video/tegra/host/nvhost_acm.o
+  CC      drivers/video/tegra/host/nvhost_syncpt.o
+  LD      drivers/video/tegra/dc/ext/built-in.o
+  LD      drivers/video/tegra/dc/built-in.o
+  LD      drivers/usb/gadget/fsl_usb2_udc.o
+  LD      drivers/usb/gadget/g_android.o
+  CC      drivers/video/tegra/fb.o
+  LD      drivers/video/tegra/host/t20/nvhost-t20.o
+  LD      drivers/video/tegra/host/t20/built-in.o
+  LD      drivers/usb/gadget/built-in.o
+  CC      drivers/video/tegra/host/nvhost_cdma.o
+  CC      drivers/video/tegra/host/nvhost_intr.o
+  LD      drivers/video/tegra/host/t30/nvhost-t30.o
+  LD      drivers/video/tegra/host/t30/built-in.o
+  CC      drivers/video/tegra/host/nvhost_channel.o
+  CC      drivers/video/tegra/nvmap/nvmap_dev.o
+  CC      drivers/video/tegra/host/nvhost_job.o
+  CC      drivers/video/tegra/host/dev.o
+  CC      drivers/video/tegra/host/bus.o
+drivers/video/tegra/nvmap/nvmap_dev.c: In function 'allocations_stringify':
+drivers/video/tegra/nvmap/nvmap_dev.c:988: warning: format '%8lx' expects type 'long unsigned int', but argument 7 has type 'unsigned int'
+drivers/video/tegra/nvmap/nvmap_dev.c:991: warning: format '%8lx' expects type 'long unsigned int', but argument 7 has type 'unsigned int'
+  CC      drivers/video/tegra/host/bus_client.o
+  CC      drivers/video/tegra/host/debug.o
+  CC      drivers/video/tegra/nvmap/nvmap_handle.o
+  CC      drivers/video/tegra/nvmap/nvmap_heap.o
+  CC      drivers/video/tegra/nvmap/nvmap_ioctl.o
+  CC      drivers/video/tegra/nvmap/nvmap_mru.o
+  LD      drivers/video/tegra/host/nvhost.o
+  LD      drivers/video/tegra/host/built-in.o
+  LD      drivers/video/tegra/nvmap/built-in.o
+  LD      drivers/video/tegra/built-in.o
+  LD      drivers/video/built-in.o
+  LD      drivers/built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+WARNING: modpost: Found 1 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  LD      .tmp_vmlinux1
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 29 of arch/arm/mach-tegra/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 52 of kernel/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 44 of mm/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 22 of fs/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 14 of crypto/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 28 of block/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 21 of lib/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 41 of drivers/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 11 of sound/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 9 of arch/arm/oprofile/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 38 of net/built-in.o is not in EXIDX output section
+  KSYM    .tmp_kallsyms1.S
+  AS      .tmp_kallsyms1.o
+  LD      .tmp_vmlinux2
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 29 of arch/arm/mach-tegra/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 52 of kernel/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 44 of mm/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 22 of fs/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 14 of crypto/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 28 of block/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 21 of lib/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 41 of drivers/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 11 of sound/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 9 of arch/arm/oprofile/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 38 of net/built-in.o is not in EXIDX output section
+  KSYM    .tmp_kallsyms2.S
+  AS      .tmp_kallsyms2.o
+  LD      vmlinux
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 29 of arch/arm/mach-tegra/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 52 of kernel/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 44 of mm/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 22 of fs/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 14 of crypto/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 28 of block/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 21 of lib/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 41 of drivers/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 11 of sound/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 9 of arch/arm/oprofile/built-in.o is not in EXIDX output section
+/home/bigbiff/android_prebuilt_toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld: warning: unwinding may not work because EXIDX input section 38 of net/built-in.o is not in EXIDX output section
+  SYSMAP  System.map
+  SYSMAP  .tmp_System.map
+  OBJCOPY arch/arm/boot/Image
+  Building modules, stage 2.
+  MODPOST 8 modules
+  Kernel: arch/arm/boot/Image is ready
+  AS      arch/arm/boot/compressed/head.o
+  CC      arch/arm/boot/compressed/misc.o
+  GZIP    arch/arm/boot/compressed/piggy.gzip
+  CC      arch/arm/boot/compressed/decompress.o
+  SHIPPED arch/arm/boot/compressed/lib1funcs.S
+  AS      arch/arm/boot/compressed/lib1funcs.o
+WARNING: drivers/net/wireless/bcmdhd/bcmdhd: 'bcmsdh_remove' exported twice. Previous export was in drivers/net/wireless/bcm4329/bcm4329.ko
+WARNING: drivers/net/wireless/bcmdhd/bcmdhd: 'bcmsdh_probe' exported twice. Previous export was in drivers/net/wireless/bcm4329/bcm4329.ko
+  CC      crypto/tcrypt.mod.o
+  CC      arch/arm/mach-tegra/baseband-xmm-power2.mod.o
+  CC      drivers/net/usb/raw_ip_net.mod.o
+  CC      drivers/net/wireless/bcm4329/bcm4329.mod.o
+  CC      drivers/net/wireless/bcmdhd/bcmdhd.mod.o
+  CC      drivers/scsi/scsi_wait_scan.mod.o
+  CC      drivers/usb/serial/baseband_usb_chr.mod.o
+  LD [M]  crypto/tcrypt.ko
+  LD [M]  drivers/net/usb/raw_ip_net.ko
+  LD [M]  drivers/net/wireless/bcm4329/bcm4329.ko
+  LD [M]  drivers/net/wireless/bcmdhd/bcmdhd.ko
+  LD [M]  drivers/scsi/scsi_wait_scan.ko
+  LD [M]  drivers/usb/serial/baseband_usb_chr.ko
+  LD [M]  net/wireless/cfg80211.ko
+  AS      arch/arm/boot/compressed/piggy.gzip.o
+  LD      arch/arm/boot/compressed/vmlinux
+  OBJCOPY arch/arm/boot/zImage
+  Kernel: arch/arm/boot/zImage is ready
